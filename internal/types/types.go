@@ -3,10 +3,6 @@
 package types
 
 import (
-	"fmt"
-	"net/url"
-	"path/filepath"
-	"strings"
 	"time"
 
 	"go.uber.org/zap"
@@ -60,89 +56,24 @@ type TLS struct {
 	KeyName  string `documentation:"API TLS key file name"         env:"API_TLS_KEY_NAME"  json:"keyName,omitempty"  yaml:"keyName,omitempty"`
 }
 
-func (t TLS) Enabled() bool {
-	return strings.TrimSpace(t.CertDir) != ""
-}
+func (t TLS) Enabled() bool { _ = "STUB: not implemented"; return false }
 
-func (t TLS) Certs() (cert, key string) {
-	cert = filepath.Join(t.CertDir, defaultIfEmpty(t.CertName, "tls.crt"))
-	key = filepath.Join(t.CertDir, defaultIfEmpty(t.KeyName, "tls.key"))
-	return cert, key
-}
+func (t TLS) Certs() (cert, key string) { _ = "STUB: not implemented"; return "", "" }
 
-func defaultIfEmpty(val, fallback string) string {
-	if strings.TrimSpace(val) == "" {
-		return fallback
-	}
-	return val
-}
+func defaultIfEmpty(val, fallback string) string { _ = "STUB: not implemented"; return "" }
 
 // Mask maks username and password.
-func (a *API) Mask() {
-	a.Username = mask(a.Username)
-	a.Password = mask(a.Password)
-}
+func (a *API) Mask() { _ = "STUB: not implemented"; return }
 
 // UniqueReplicas get unique replication instances.
-func (cfg *Config) UniqueReplicas() []AdGuardInstance {
-	dedup := make(map[string]AdGuardInstance)
-	if cfg.Replica != nil && cfg.Replica.URL != "" {
-		if cfg.Replica.APIPath == "" {
-			cfg.Replica.APIPath = DefaultAPIPath
-		}
-		dedup[cfg.Replica.Key()] = *cfg.Replica
-	}
-	for _, replica := range cfg.Replicas {
-		if replica.APIPath == "" {
-			replica.APIPath = DefaultAPIPath
-		}
-		if replica.URL != "" {
-			dedup[replica.Key()] = replica
-		}
-	}
-
-	var r []AdGuardInstance
-	for _, replica := range dedup {
-		r = append(r, replica)
-	}
-	return r
-}
+func (cfg *Config) UniqueReplicas() []AdGuardInstance { _ = "STUB: not implemented"; return nil }
 
 // Log the current config.
-func (cfg *Config) Log(l *zap.SugaredLogger) {
-	c := cfg.mask()
-	l.With("config", c).Debug("Using config")
-}
+func (cfg *Config) Log(l *zap.SugaredLogger) { _ = "STUB: not implemented"; return }
 
-func (cfg *Config) mask() *Config {
-	c := cfg.DeepCopy()
-	c.Origin.Mask()
-	if c.Replica != nil {
-		if c.Replica.URL == "" {
-			c.Replica = nil
-		} else {
-			c.Replica.Mask()
-		}
-	}
-	for i := range c.Replicas {
-		c.Replicas[i].Mask()
-	}
-	c.API.Mask()
-	return c
-}
+func (cfg *Config) mask() *Config { _ = "STUB: not implemented"; return nil }
 
-func (cfg *Config) Init() error {
-	if err := cfg.Origin.Init(); err != nil {
-		return err
-	}
-	for i := range cfg.Replicas {
-		replica := &cfg.Replicas[i]
-		if err := replica.Init(); err != nil {
-			return err
-		}
-	}
-	return nil
-}
+func (cfg *Config) Init() error { _ = "STUB: not implemented"; return nil }
 
 // AdGuardInstance AdguardHome config instance
 // +k8s:deepcopy-gen=true
@@ -164,43 +95,14 @@ type AdGuardInstance struct {
 }
 
 // Key AdGuardInstance key.
-func (i *AdGuardInstance) Key() string {
-	return fmt.Sprintf("%s#%s", i.URL, i.APIPath)
-}
+func (i *AdGuardInstance) Key() string { _ = "STUB: not implemented"; return "" }
 
 // Mask maks username and password.
-func (i *AdGuardInstance) Mask() {
-	i.Username = mask(i.Username)
-	i.Password = mask(i.Password)
-}
+func (i *AdGuardInstance) Mask() { _ = "STUB: not implemented"; return }
 
-func (i *AdGuardInstance) Init() error {
-	u, err := url.Parse(i.URL)
-	if err != nil {
-		return err
-	}
-	i.Host = u.Host
+func (i *AdGuardInstance) Init() error { _ = "STUB: not implemented"; return nil }
 
-	if i.WebURL == "" {
-		i.WebHost = i.Host
-		i.WebURL = i.URL
-	} else {
-		u, err := url.Parse(i.WebURL)
-		if err != nil {
-			return err
-		}
-		i.WebHost = u.Host
-	}
-	return nil
-}
-
-func mask(s string) string {
-	if len(s) < 3 {
-		return strings.Repeat("*", len(s))
-	}
-	mask := strings.Repeat("*", len(s)-2)
-	return fmt.Sprintf("%v%s%v", string(s[0]), mask, string(s[len(s)-1]))
-}
+func mask(s string) string { _ = "STUB: not implemented"; return "" }
 
 // Protection API struct.
 type Protection struct {

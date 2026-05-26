@@ -1,13 +1,6 @@
 package config
 
 import (
-	"fmt"
-	"os"
-	"strings"
-
-	"github.com/santhosh-tekuri/jsonschema/v6"
-	"gopkg.in/yaml.v3"
-
 	_ "embed"
 )
 
@@ -17,44 +10,20 @@ const schemaURL = "config-schema.json"
 var schemaData string
 
 func validateSchema(cfgFile string) error {
+	_ = "STUB: not implemented"
 	// ignore if file not exists
-	if _, err := os.Stat(cfgFile); err != nil {
-		// Config file does not exist or is not readable - ignore it
-		//nolint:nilerr
-		return nil
-	}
-	// Load YAML file
-	yamlContent, err := os.ReadFile(cfgFile)
-	if err != nil {
-		return fmt.Errorf("config file %q is invalid: %w", cfgFile, err)
-	}
-
-	return validateYAML(yamlContent)
+	return nil
 }
 
-func validateYAML(yamlContent []byte) error {
-	if yamlContent == nil || strings.TrimSpace(string(yamlContent)) == "" {
-		return nil
-	}
+// Config file does not exist or is not readable - ignore it
+//nolint:nilerr
 
-	// Convert YAML to JSON
-	var yamlData any
-	err := yaml.Unmarshal(yamlContent, &yamlData)
-	if err != nil {
-		return err
-	}
+// Load YAML file
 
-	// Load JSON schema
-	sch, err := jsonschema.UnmarshalJSON(strings.NewReader(schemaData))
-	if err != nil {
-		return err
-	}
+func validateYAML(yamlContent []byte) error { _ = "STUB: not implemented"; return nil }
 
-	c := jsonschema.NewCompiler()
-	if err := c.AddResource(schemaURL, sch); err != nil {
-		return err
-	}
-	schema := c.MustCompile(schemaURL)
-	// validateSchema
-	return schema.Validate(yamlData)
-}
+// Convert YAML to JSON
+
+// Load JSON schema
+
+// validateSchema

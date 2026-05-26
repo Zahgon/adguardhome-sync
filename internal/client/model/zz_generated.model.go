@@ -4,17 +4,10 @@
 package model
 
 import (
-	"bytes"
 	"context"
-	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
-	"net/url"
-	"strings"
 	"time"
-
-	"github.com/oapi-codegen/runtime"
 )
 
 const (
@@ -29,18 +22,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the CheckConfigStaticIpInfoStatic enum.
-func (e CheckConfigStaticIpInfoStatic) Valid() bool {
-	switch e {
-	case CheckConfigStaticIpInfoStaticError:
-		return true
-	case CheckConfigStaticIpInfoStaticNo:
-		return true
-	case CheckConfigStaticIpInfoStaticYes:
-		return true
-	default:
-		return false
-	}
-}
+func (e CheckConfigStaticIpInfoStatic) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for DNSConfigBlockingMode.
 const (
@@ -52,22 +34,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the DNSConfigBlockingMode enum.
-func (e DNSConfigBlockingMode) Valid() bool {
-	switch e {
-	case CustomIp:
-		return true
-	case Default:
-		return true
-	case NullIp:
-		return true
-	case Nxdomain:
-		return true
-	case Refused:
-		return true
-	default:
-		return false
-	}
-}
+func (e DNSConfigBlockingMode) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for DNSConfigUpstreamMode.
 const (
@@ -78,20 +45,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the DNSConfigUpstreamMode enum.
-func (e DNSConfigUpstreamMode) Valid() bool {
-	switch e {
-	case MapConstDeprecatedTrueDescriptionUseloadBalanceInstead:
-		return true
-	case MapConstFastestAddr:
-		return true
-	case MapConstLoadBalance:
-		return true
-	case MapConstParallel:
-		return true
-	default:
-		return false
-	}
-}
+func (e DNSConfigUpstreamMode) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for DhcpSearchResultOtherServerFound.
 const (
@@ -101,18 +55,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the DhcpSearchResultOtherServerFound enum.
-func (e DhcpSearchResultOtherServerFound) Valid() bool {
-	switch e {
-	case DhcpSearchResultOtherServerFoundError:
-		return true
-	case DhcpSearchResultOtherServerFoundNo:
-		return true
-	case DhcpSearchResultOtherServerFoundYes:
-		return true
-	default:
-		return false
-	}
-}
+func (e DhcpSearchResultOtherServerFound) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for DhcpSearchResultStaticIPStatic.
 const (
@@ -122,18 +65,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the DhcpSearchResultStaticIPStatic enum.
-func (e DhcpSearchResultStaticIPStatic) Valid() bool {
-	switch e {
-	case DhcpSearchResultStaticIPStaticError:
-		return true
-	case DhcpSearchResultStaticIPStaticNo:
-		return true
-	case DhcpSearchResultStaticIPStaticYes:
-		return true
-	default:
-		return false
-	}
-}
+func (e DhcpSearchResultStaticIPStatic) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for FilterCheckHostResponseReason.
 const (
@@ -152,36 +84,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the FilterCheckHostResponseReason enum.
-func (e FilterCheckHostResponseReason) Valid() bool {
-	switch e {
-	case FilterCheckHostResponseReasonFilteredBlackList:
-		return true
-	case FilterCheckHostResponseReasonFilteredBlockedService:
-		return true
-	case FilterCheckHostResponseReasonFilteredInvalid:
-		return true
-	case FilterCheckHostResponseReasonFilteredParental:
-		return true
-	case FilterCheckHostResponseReasonFilteredSafeBrowsing:
-		return true
-	case FilterCheckHostResponseReasonFilteredSafeSearch:
-		return true
-	case FilterCheckHostResponseReasonNotFilteredError:
-		return true
-	case FilterCheckHostResponseReasonNotFilteredNotFound:
-		return true
-	case FilterCheckHostResponseReasonNotFilteredWhiteList:
-		return true
-	case FilterCheckHostResponseReasonRewrite:
-		return true
-	case FilterCheckHostResponseReasonRewriteEtcHosts:
-		return true
-	case FilterCheckHostResponseReasonRewriteRule:
-		return true
-	default:
-		return false
-	}
-}
+func (e FilterCheckHostResponseReason) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for ProfileInfoTheme.
 const (
@@ -191,18 +94,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the ProfileInfoTheme enum.
-func (e ProfileInfoTheme) Valid() bool {
-	switch e {
-	case Auto:
-		return true
-	case Dark:
-		return true
-	case Light:
-		return true
-	default:
-		return false
-	}
-}
+func (e ProfileInfoTheme) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for QueryLogConfigInterval.
 const (
@@ -214,22 +106,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the QueryLogConfigInterval enum.
-func (e QueryLogConfigInterval) Valid() bool {
-	switch e {
-	case QueryLogConfigIntervalN025:
-		return true
-	case QueryLogConfigIntervalN1:
-		return true
-	case QueryLogConfigIntervalN30:
-		return true
-	case QueryLogConfigIntervalN7:
-		return true
-	case QueryLogConfigIntervalN90:
-		return true
-	default:
-		return false
-	}
-}
+func (e QueryLogConfigInterval) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for QueryLogItemClientProto.
 const (
@@ -241,22 +118,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the QueryLogItemClientProto enum.
-func (e QueryLogItemClientProto) Valid() bool {
-	switch e {
-	case Dnscrypt:
-		return true
-	case Doh:
-		return true
-	case Doq:
-		return true
-	case Dot:
-		return true
-	case Empty:
-		return true
-	default:
-		return false
-	}
-}
+func (e QueryLogItemClientProto) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for QueryLogItemReason.
 const (
@@ -275,36 +137,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the QueryLogItemReason enum.
-func (e QueryLogItemReason) Valid() bool {
-	switch e {
-	case QueryLogItemReasonFilteredBlackList:
-		return true
-	case QueryLogItemReasonFilteredBlockedService:
-		return true
-	case QueryLogItemReasonFilteredInvalid:
-		return true
-	case QueryLogItemReasonFilteredParental:
-		return true
-	case QueryLogItemReasonFilteredSafeBrowsing:
-		return true
-	case QueryLogItemReasonFilteredSafeSearch:
-		return true
-	case QueryLogItemReasonNotFilteredError:
-		return true
-	case QueryLogItemReasonNotFilteredNotFound:
-		return true
-	case QueryLogItemReasonNotFilteredWhiteList:
-		return true
-	case QueryLogItemReasonRewrite:
-		return true
-	case QueryLogItemReasonRewriteEtcHosts:
-		return true
-	case QueryLogItemReasonRewriteRule:
-		return true
-	default:
-		return false
-	}
-}
+func (e QueryLogItemReason) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for StatsTimeUnits.
 const (
@@ -313,16 +146,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the StatsTimeUnits enum.
-func (e StatsTimeUnits) Valid() bool {
-	switch e {
-	case Days:
-		return true
-	case Hours:
-		return true
-	default:
-		return false
-	}
-}
+func (e StatsTimeUnits) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for StatsConfigInterval.
 const (
@@ -334,22 +158,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the StatsConfigInterval enum.
-func (e StatsConfigInterval) Valid() bool {
-	switch e {
-	case StatsConfigIntervalN0:
-		return true
-	case StatsConfigIntervalN1:
-		return true
-	case StatsConfigIntervalN30:
-		return true
-	case StatsConfigIntervalN7:
-		return true
-	case StatsConfigIntervalN90:
-		return true
-	default:
-		return false
-	}
-}
+func (e StatsConfigInterval) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for TlsConfigKeyType.
 const (
@@ -358,16 +167,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the TlsConfigKeyType enum.
-func (e TlsConfigKeyType) Valid() bool {
-	switch e {
-	case ECDSA:
-		return true
-	case RSA:
-		return true
-	default:
-		return false
-	}
-}
+func (e TlsConfigKeyType) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // Defines values for QueryLogParamsResponseStatus.
 const (
@@ -383,30 +183,7 @@ const (
 )
 
 // Valid indicates whether the value is a known member of the QueryLogParamsResponseStatus enum.
-func (e QueryLogParamsResponseStatus) Valid() bool {
-	switch e {
-	case All:
-		return true
-	case Blocked:
-		return true
-	case BlockedParental:
-		return true
-	case BlockedSafebrowsing:
-		return true
-	case Filtered:
-		return true
-	case Processed:
-		return true
-	case Rewritten:
-		return true
-	case SafeSearch:
-		return true
-	case Whitelisted:
-		return true
-	default:
-		return false
-	}
-}
+func (e QueryLogParamsResponseStatus) Valid() bool { _ = "STUB: not implemented"; return false }
 
 // AccessList Client and host access list.  Each of the lists should contain only unique elements.  In addition, allowed and disallowed lists cannot contain the same elements.
 type AccessList struct {
@@ -1650,70 +1427,18 @@ type GetVersionJsonJSONRequestBody = GetVersionRequest
 // Getter for additional properties for TopArrayEntry. Returns the specified
 // element and whether it was found
 func (a TopArrayEntry) Get(fieldName string) (value float32, found bool) {
-	if a.AdditionalProperties != nil {
-		value, found = a.AdditionalProperties[fieldName]
-	}
-	return
+	_ = "STUB: not implemented"
+	return 0, false
 }
 
 // Setter for additional properties for TopArrayEntry
-func (a *TopArrayEntry) Set(fieldName string, value float32) {
-	if a.AdditionalProperties == nil {
-		a.AdditionalProperties = make(map[string]float32)
-	}
-	a.AdditionalProperties[fieldName] = value
-}
+func (a *TopArrayEntry) Set(fieldName string, value float32) { _ = "STUB: not implemented"; return }
 
 // Override default JSON handling for TopArrayEntry to handle AdditionalProperties
-func (a *TopArrayEntry) UnmarshalJSON(b []byte) error {
-	object := make(map[string]json.RawMessage)
-	err := json.Unmarshal(b, &object)
-	if err != nil {
-		return err
-	}
-
-	if raw, found := object["domain_or_ip"]; found {
-		err = json.Unmarshal(raw, &a.DomainOrIp)
-		if err != nil {
-			return fmt.Errorf("error reading 'domain_or_ip': %w", err)
-		}
-		delete(object, "domain_or_ip")
-	}
-
-	if len(object) != 0 {
-		a.AdditionalProperties = make(map[string]float32)
-		for fieldName, fieldBuf := range object {
-			var fieldVal float32
-			err := json.Unmarshal(fieldBuf, &fieldVal)
-			if err != nil {
-				return fmt.Errorf("error unmarshaling field %s: %w", fieldName, err)
-			}
-			a.AdditionalProperties[fieldName] = fieldVal
-		}
-	}
-	return nil
-}
+func (a *TopArrayEntry) UnmarshalJSON(b []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Override default JSON handling for TopArrayEntry to handle AdditionalProperties
-func (a TopArrayEntry) MarshalJSON() ([]byte, error) {
-	var err error
-	object := make(map[string]json.RawMessage)
-
-	if a.DomainOrIp != nil {
-		object["domain_or_ip"], err = json.Marshal(a.DomainOrIp)
-		if err != nil {
-			return nil, fmt.Errorf("error marshaling 'domain_or_ip': %w", err)
-		}
-	}
-
-	for fieldName, field := range a.AdditionalProperties {
-		object[fieldName], err = json.Marshal(field)
-		if err != nil {
-			return nil, fmt.Errorf("error marshaling '%s': %w", fieldName, err)
-		}
-	}
-	return json.Marshal(object)
-}
+func (a TopArrayEntry) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // RequestEditorFn  is the function signature for the RequestEditor callback function
 type RequestEditorFn func(ctx context.Context, req *http.Request) error
@@ -1747,43 +1472,29 @@ type ClientOption func(*AdguardHomeClient) error
 
 // Creates a new AdguardHomeClient, with reasonable defaults
 func NewClient(server string, opts ...ClientOption) (*AdguardHomeClient, error) {
+	_ = "STUB: not implemented"
 	// create a client with sane default values
-	client := AdguardHomeClient{
-		Server: server,
-	}
-	// mutate client and add all optional params
-	for _, o := range opts {
-		if err := o(&client); err != nil {
-			return nil, err
-		}
-	}
-	// ensure the server URL always has a trailing slash
-	if !strings.HasSuffix(client.Server, "/") {
-		client.Server += "/"
-	}
-	// create httpClient, if not already present
-	if client.Client == nil {
-		client.Client = &http.Client{}
-	}
-	return &client, nil
+	return nil, nil
 }
+
+// mutate client and add all optional params
+
+// ensure the server URL always has a trailing slash
+
+// create httpClient, if not already present
 
 // WithHTTPClient allows overriding the default Doer, which is
 // automatically created using http.Client. This is useful for tests.
 func WithHTTPClient(doer HttpRequestDoer) ClientOption {
-	return func(c *AdguardHomeClient) error {
-		c.Client = doer
-		return nil
-	}
+	_ = "STUB: not implemented"
+	return *new(ClientOption)
 }
 
 // WithRequestEditorFn allows setting up a callback function, which will be
 // called right before sending the request. This can be used to mutate the request.
 func WithRequestEditorFn(fn RequestEditorFn) ClientOption {
-	return func(c *AdguardHomeClient) error {
-		c.RequestEditors = append(c.RequestEditors, fn)
-		return nil
-	}
+	_ = "STUB: not implemented"
+	return *new(ClientOption)
 }
 
 // The interface specification for the client above.
@@ -2109,4373 +1820,1316 @@ type ClientInterface interface {
 }
 
 func (c *AdguardHomeClient) AccessList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccessListRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) AccessSetWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccessSetRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) AccessSet(ctx context.Context, body AccessSetJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccessSetRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) MobileConfigDoH(ctx context.Context, params *MobileConfigDoHParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMobileConfigDoHRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) MobileConfigDoT(ctx context.Context, params *MobileConfigDoTParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMobileConfigDoTRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesAll(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesAllRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesSchedule(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesScheduleRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesListRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesAvailableServices(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesAvailableServicesRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesSetWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesSetRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesSet(ctx context.Context, body BlockedServicesSetJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesSetRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesScheduleUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesScheduleUpdateRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BlockedServicesScheduleUpdate(ctx context.Context, body BlockedServicesScheduleUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBlockedServicesScheduleUpdateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) CacheClear(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCacheClearRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsAddWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsAddRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsAdd(ctx context.Context, body ClientsAddJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsAddRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsDeleteRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsDelete(ctx context.Context, body ClientsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsDeleteRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsFind(ctx context.Context, params *ClientsFindParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsFindRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsSearchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsSearchRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsSearch(ctx context.Context, body ClientsSearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsSearchRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsUpdateRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ClientsUpdate(ctx context.Context, body ClientsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClientsUpdateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpAddStaticLeaseWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpAddStaticLeaseRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpAddStaticLease(ctx context.Context, body DhcpAddStaticLeaseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpAddStaticLeaseRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) CheckActiveDhcpWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCheckActiveDhcpRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) CheckActiveDhcp(ctx context.Context, body CheckActiveDhcpJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCheckActiveDhcpRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpInterfaces(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpInterfacesRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpRemoveStaticLeaseWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpRemoveStaticLeaseRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpRemoveStaticLease(ctx context.Context, body DhcpRemoveStaticLeaseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpRemoveStaticLeaseRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpReset(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpResetRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpResetLeases(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpResetLeasesRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpSetConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpSetConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpSetConfig(ctx context.Context, body DhcpSetConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpSetConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpUpdateStaticLeaseWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpUpdateStaticLeaseRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DhcpUpdateStaticLease(ctx context.Context, body DhcpUpdateStaticLeaseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDhcpUpdateStaticLeaseRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DnsConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDnsConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DnsConfig(ctx context.Context, body DnsConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDnsConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) DnsInfo(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDnsInfoRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringAddURLWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringAddURLRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringAddURL(ctx context.Context, body FilteringAddURLJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringAddURLRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringCheckHost(ctx context.Context, params *FilteringCheckHostParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringCheckHostRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringConfig(ctx context.Context, body FilteringConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringRefreshWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringRefreshRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringRefresh(ctx context.Context, body FilteringRefreshJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringRefreshRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringRemoveURLWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringRemoveURLRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringRemoveURL(ctx context.Context, body FilteringRemoveURLJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringRemoveURLRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringSetRulesWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringSetRulesRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringSetRules(ctx context.Context, body FilteringSetRulesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringSetRulesRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringSetURLWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringSetURLRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringSetURL(ctx context.Context, body FilteringSetURLJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringSetURLRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) FilteringStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewFilteringStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ChangeLanguageWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewChangeLanguageRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ChangeLanguage(ctx context.Context, body ChangeLanguageJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewChangeLanguageRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) CurrentLanguage(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCurrentLanguageRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) InstallCheckConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewInstallCheckConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) InstallCheckConfig(ctx context.Context, body InstallCheckConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewInstallCheckConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) InstallConfigureWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewInstallConfigureRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) InstallConfigure(ctx context.Context, body InstallConfigureJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewInstallConfigureRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) InstallGetAddresses(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewInstallGetAddressesRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) LoginWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoginRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) Login(ctx context.Context, body LoginJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoginRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) Logout(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLogoutRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ParentalDisable(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewParentalDisableRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ParentalEnable(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewParentalEnableRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) ParentalStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewParentalStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) GetProfile(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetProfileRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) UpdateProfileWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewUpdateProfileRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) UpdateProfile(ctx context.Context, body UpdateProfileJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewUpdateProfileRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SetProtectionWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSetProtectionRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SetProtection(ctx context.Context, body SetProtectionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSetProtectionRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) QueryLog(ctx context.Context, params *QueryLogParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewQueryLogRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) GetQueryLogConfig(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetQueryLogConfigRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) PutQueryLogConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutQueryLogConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) PutQueryLogConfig(ctx context.Context, body PutQueryLogConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutQueryLogConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) QuerylogClear(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewQuerylogClearRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) QueryLogConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewQueryLogConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) QueryLogConfig(ctx context.Context, body QueryLogConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewQueryLogConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) QueryLogInfo(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewQueryLogInfoRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteAddWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteAddRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteAdd(ctx context.Context, body RewriteAddJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteAddRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteDeleteRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteDelete(ctx context.Context, body RewriteDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteDeleteRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteListRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteSettingsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteSettingsGetRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteSettingsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteSettingsUpdateRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteSettingsUpdate(ctx context.Context, body RewriteSettingsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteSettingsUpdateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteUpdateRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) RewriteUpdate(ctx context.Context, body RewriteUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRewriteUpdateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafebrowsingDisable(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafebrowsingDisableRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafebrowsingEnable(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafebrowsingEnableRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafebrowsingStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafebrowsingStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafesearchDisable(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafesearchDisableRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafesearchEnable(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafesearchEnableRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafesearchSettingsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafesearchSettingsRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafesearchSettings(ctx context.Context, body SafesearchSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafesearchSettingsRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) SafesearchStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSafesearchStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) Stats(ctx context.Context, params *StatsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewStatsRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) GetStatsConfig(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetStatsConfigRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) PutStatsConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutStatsConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) PutStatsConfig(ctx context.Context, body PutStatsConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutStatsConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) StatsConfigWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewStatsConfigRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) StatsConfig(ctx context.Context, body StatsConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewStatsConfigRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) StatsInfo(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewStatsInfoRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) StatsReset(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewStatsResetRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) Status(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TestUpstreamDNSWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTestUpstreamDNSRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TestUpstreamDNS(ctx context.Context, body TestUpstreamDNSJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTestUpstreamDNSRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TlsConfigureWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTlsConfigureRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TlsConfigure(ctx context.Context, body TlsConfigureJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTlsConfigureRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TlsStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTlsStatusRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TlsValidateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTlsValidateRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) TlsValidate(ctx context.Context, body TlsValidateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTlsValidateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) BeginUpdate(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewBeginUpdateRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) GetVersionJsonWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetVersionJsonRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) GetVersionJson(ctx context.Context, body GetVersionJsonJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetVersionJsonRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewAccessListRequest generates requests for AccessList
 func NewAccessListRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/access/list")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewAccessSetRequest calls the generic AccessSet builder with application/json body
 func NewAccessSetRequest(server string, body AccessSetJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewAccessSetRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewAccessSetRequestWithBody generates requests for AccessSet with any type of body
 func NewAccessSetRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/access/set")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewMobileConfigDoHRequest generates requests for MobileConfigDoH
 func NewMobileConfigDoHRequest(server string, params *MobileConfigDoHParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/apple/doh.mobileconfig")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "host", params.Host, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
-				}
-			}
-		}
-
-		if params.ClientId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "client_id", *params.ClientId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewMobileConfigDoTRequest generates requests for MobileConfigDoT
 func NewMobileConfigDoTRequest(server string, params *MobileConfigDoTParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/apple/dot.mobileconfig")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "host", params.Host, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
-				}
-			}
-		}
-
-		if params.ClientId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "client_id", *params.ClientId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesAllRequest generates requests for BlockedServicesAll
 func NewBlockedServicesAllRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/blocked_services/all")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesScheduleRequest generates requests for BlockedServicesSchedule
 func NewBlockedServicesScheduleRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/blocked_services/get")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesListRequest generates requests for BlockedServicesList
 func NewBlockedServicesListRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/blocked_services/list")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesAvailableServicesRequest generates requests for BlockedServicesAvailableServices
 func NewBlockedServicesAvailableServicesRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/blocked_services/services")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesSetRequest calls the generic BlockedServicesSet builder with application/json body
 func NewBlockedServicesSetRequest(server string, body BlockedServicesSetJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewBlockedServicesSetRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesSetRequestWithBody generates requests for BlockedServicesSet with any type of body
 func NewBlockedServicesSetRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/blocked_services/set")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesScheduleUpdateRequest calls the generic BlockedServicesScheduleUpdate builder with application/json body
 func NewBlockedServicesScheduleUpdateRequest(server string, body BlockedServicesScheduleUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewBlockedServicesScheduleUpdateRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBlockedServicesScheduleUpdateRequestWithBody generates requests for BlockedServicesScheduleUpdate with any type of body
 func NewBlockedServicesScheduleUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/blocked_services/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewCacheClearRequest generates requests for CacheClear
 func NewCacheClearRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cache_clear")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsStatusRequest generates requests for ClientsStatus
 func NewClientsStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/clients")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsAddRequest calls the generic ClientsAdd builder with application/json body
 func NewClientsAddRequest(server string, body ClientsAddJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewClientsAddRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsAddRequestWithBody generates requests for ClientsAdd with any type of body
 func NewClientsAddRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/clients/add")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsDeleteRequest calls the generic ClientsDelete builder with application/json body
 func NewClientsDeleteRequest(server string, body ClientsDeleteJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewClientsDeleteRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsDeleteRequestWithBody generates requests for ClientsDelete with any type of body
 func NewClientsDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/clients/delete")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsFindRequest generates requests for ClientsFind
 func NewClientsFindRequest(server string, params *ClientsFindParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/clients/find")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.Ip0 != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "ip0", *params.Ip0, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsSearchRequest calls the generic ClientsSearch builder with application/json body
 func NewClientsSearchRequest(server string, body ClientsSearchJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewClientsSearchRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsSearchRequestWithBody generates requests for ClientsSearch with any type of body
 func NewClientsSearchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/clients/search")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsUpdateRequest calls the generic ClientsUpdate builder with application/json body
 func NewClientsUpdateRequest(server string, body ClientsUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewClientsUpdateRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewClientsUpdateRequestWithBody generates requests for ClientsUpdate with any type of body
 func NewClientsUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/clients/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpAddStaticLeaseRequest calls the generic DhcpAddStaticLease builder with application/json body
 func NewDhcpAddStaticLeaseRequest(server string, body DhcpAddStaticLeaseJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewDhcpAddStaticLeaseRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpAddStaticLeaseRequestWithBody generates requests for DhcpAddStaticLease with any type of body
 func NewDhcpAddStaticLeaseRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/add_static_lease")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewCheckActiveDhcpRequest calls the generic CheckActiveDhcp builder with application/json body
 func NewCheckActiveDhcpRequest(server string, body CheckActiveDhcpJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewCheckActiveDhcpRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewCheckActiveDhcpRequestWithBody generates requests for CheckActiveDhcp with any type of body
 func NewCheckActiveDhcpRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/find_active_dhcp")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpInterfacesRequest generates requests for DhcpInterfaces
 func NewDhcpInterfacesRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/interfaces")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpRemoveStaticLeaseRequest calls the generic DhcpRemoveStaticLease builder with application/json body
 func NewDhcpRemoveStaticLeaseRequest(server string, body DhcpRemoveStaticLeaseJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewDhcpRemoveStaticLeaseRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpRemoveStaticLeaseRequestWithBody generates requests for DhcpRemoveStaticLease with any type of body
 func NewDhcpRemoveStaticLeaseRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/remove_static_lease")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpResetRequest generates requests for DhcpReset
 func NewDhcpResetRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/reset")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpResetLeasesRequest generates requests for DhcpResetLeases
 func NewDhcpResetLeasesRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/reset_leases")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpSetConfigRequest calls the generic DhcpSetConfig builder with application/json body
 func NewDhcpSetConfigRequest(server string, body DhcpSetConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewDhcpSetConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpSetConfigRequestWithBody generates requests for DhcpSetConfig with any type of body
 func NewDhcpSetConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/set_config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpStatusRequest generates requests for DhcpStatus
 func NewDhcpStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpUpdateStaticLeaseRequest calls the generic DhcpUpdateStaticLease builder with application/json body
 func NewDhcpUpdateStaticLeaseRequest(server string, body DhcpUpdateStaticLeaseJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewDhcpUpdateStaticLeaseRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDhcpUpdateStaticLeaseRequestWithBody generates requests for DhcpUpdateStaticLease with any type of body
 func NewDhcpUpdateStaticLeaseRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dhcp/update_static_lease")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDnsConfigRequest calls the generic DnsConfig builder with application/json body
 func NewDnsConfigRequest(server string, body DnsConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewDnsConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDnsConfigRequestWithBody generates requests for DnsConfig with any type of body
 func NewDnsConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dns_config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewDnsInfoRequest generates requests for DnsInfo
 func NewDnsInfoRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/dns_info")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringAddURLRequest calls the generic FilteringAddURL builder with application/json body
 func NewFilteringAddURLRequest(server string, body FilteringAddURLJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewFilteringAddURLRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringAddURLRequestWithBody generates requests for FilteringAddURL with any type of body
 func NewFilteringAddURLRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/add_url")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringCheckHostRequest generates requests for FilteringCheckHost
 func NewFilteringCheckHostRequest(server string, params *FilteringCheckHostParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/check_host")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "name", params.Name, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
-				}
-			}
-		}
-
-		if params.Client != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "client", *params.Client, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.Qtype != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "qtype", *params.Qtype, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringConfigRequest calls the generic FilteringConfig builder with application/json body
 func NewFilteringConfigRequest(server string, body FilteringConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewFilteringConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringConfigRequestWithBody generates requests for FilteringConfig with any type of body
 func NewFilteringConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringRefreshRequest calls the generic FilteringRefresh builder with application/json body
 func NewFilteringRefreshRequest(server string, body FilteringRefreshJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewFilteringRefreshRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringRefreshRequestWithBody generates requests for FilteringRefresh with any type of body
 func NewFilteringRefreshRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/refresh")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringRemoveURLRequest calls the generic FilteringRemoveURL builder with application/json body
 func NewFilteringRemoveURLRequest(server string, body FilteringRemoveURLJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewFilteringRemoveURLRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringRemoveURLRequestWithBody generates requests for FilteringRemoveURL with any type of body
 func NewFilteringRemoveURLRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/remove_url")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringSetRulesRequest calls the generic FilteringSetRules builder with application/json body
 func NewFilteringSetRulesRequest(server string, body FilteringSetRulesJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewFilteringSetRulesRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringSetRulesRequestWithBody generates requests for FilteringSetRules with any type of body
 func NewFilteringSetRulesRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/set_rules")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringSetURLRequest calls the generic FilteringSetURL builder with application/json body
 func NewFilteringSetURLRequest(server string, body FilteringSetURLJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewFilteringSetURLRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringSetURLRequestWithBody generates requests for FilteringSetURL with any type of body
 func NewFilteringSetURLRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/set_url")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewFilteringStatusRequest generates requests for FilteringStatus
 func NewFilteringStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/filtering/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewChangeLanguageRequest calls the generic ChangeLanguage builder with application/json body
 func NewChangeLanguageRequest(server string, body ChangeLanguageJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewChangeLanguageRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewChangeLanguageRequestWithBody generates requests for ChangeLanguage with any type of body
 func NewChangeLanguageRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/i18n/change_language")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewCurrentLanguageRequest generates requests for CurrentLanguage
 func NewCurrentLanguageRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/i18n/current_language")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewInstallCheckConfigRequest calls the generic InstallCheckConfig builder with application/json body
 func NewInstallCheckConfigRequest(server string, body InstallCheckConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewInstallCheckConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewInstallCheckConfigRequestWithBody generates requests for InstallCheckConfig with any type of body
 func NewInstallCheckConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/install/check_config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewInstallConfigureRequest calls the generic InstallConfigure builder with application/json body
 func NewInstallConfigureRequest(server string, body InstallConfigureJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewInstallConfigureRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewInstallConfigureRequestWithBody generates requests for InstallConfigure with any type of body
 func NewInstallConfigureRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/install/configure")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewInstallGetAddressesRequest generates requests for InstallGetAddresses
 func NewInstallGetAddressesRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/install/get_addresses")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewLoginRequest calls the generic Login builder with application/json body
 func NewLoginRequest(server string, body LoginJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewLoginRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewLoginRequestWithBody generates requests for Login with any type of body
 func NewLoginRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/login")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewLogoutRequest generates requests for Logout
 func NewLogoutRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/logout")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewParentalDisableRequest generates requests for ParentalDisable
 func NewParentalDisableRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/parental/disable")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewParentalEnableRequest generates requests for ParentalEnable
 func NewParentalEnableRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/parental/enable")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewParentalStatusRequest generates requests for ParentalStatus
 func NewParentalStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/parental/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewGetProfileRequest generates requests for GetProfile
 func NewGetProfileRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/profile")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewUpdateProfileRequest calls the generic UpdateProfile builder with application/json body
 func NewUpdateProfileRequest(server string, body UpdateProfileJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewUpdateProfileRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewUpdateProfileRequestWithBody generates requests for UpdateProfile with any type of body
 func NewUpdateProfileRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/profile/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSetProtectionRequest calls the generic SetProtection builder with application/json body
 func NewSetProtectionRequest(server string, body SetProtectionJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewSetProtectionRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSetProtectionRequestWithBody generates requests for SetProtection with any type of body
 func NewSetProtectionRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/protection")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewQueryLogRequest generates requests for QueryLog
 func NewQueryLogRequest(server string, params *QueryLogParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/querylog")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.OlderThan != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "older_than", *params.OlderThan, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.Offset != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "offset", *params.Offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.Search != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.ResponseStatus != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "response_status", *params.ResponseStatus, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewGetQueryLogConfigRequest generates requests for GetQueryLogConfig
 func NewGetQueryLogConfigRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/querylog/config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewPutQueryLogConfigRequest calls the generic PutQueryLogConfig builder with application/json body
 func NewPutQueryLogConfigRequest(server string, body PutQueryLogConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPutQueryLogConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewPutQueryLogConfigRequestWithBody generates requests for PutQueryLogConfig with any type of body
 func NewPutQueryLogConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/querylog/config/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewQuerylogClearRequest generates requests for QuerylogClear
 func NewQuerylogClearRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/querylog_clear")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewQueryLogConfigRequest calls the generic QueryLogConfig builder with application/json body
 func NewQueryLogConfigRequest(server string, body QueryLogConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewQueryLogConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewQueryLogConfigRequestWithBody generates requests for QueryLogConfig with any type of body
 func NewQueryLogConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/querylog_config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewQueryLogInfoRequest generates requests for QueryLogInfo
 func NewQueryLogInfoRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/querylog_info")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteAddRequest calls the generic RewriteAdd builder with application/json body
 func NewRewriteAddRequest(server string, body RewriteAddJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewRewriteAddRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteAddRequestWithBody generates requests for RewriteAdd with any type of body
 func NewRewriteAddRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/rewrite/add")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteDeleteRequest calls the generic RewriteDelete builder with application/json body
 func NewRewriteDeleteRequest(server string, body RewriteDeleteJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewRewriteDeleteRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteDeleteRequestWithBody generates requests for RewriteDelete with any type of body
 func NewRewriteDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/rewrite/delete")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteListRequest generates requests for RewriteList
 func NewRewriteListRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/rewrite/list")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteSettingsGetRequest generates requests for RewriteSettingsGet
 func NewRewriteSettingsGetRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/rewrite/settings")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteSettingsUpdateRequest calls the generic RewriteSettingsUpdate builder with application/json body
 func NewRewriteSettingsUpdateRequest(server string, body RewriteSettingsUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewRewriteSettingsUpdateRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteSettingsUpdateRequestWithBody generates requests for RewriteSettingsUpdate with any type of body
 func NewRewriteSettingsUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/rewrite/settings/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteUpdateRequest calls the generic RewriteUpdate builder with application/json body
 func NewRewriteUpdateRequest(server string, body RewriteUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewRewriteUpdateRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewRewriteUpdateRequestWithBody generates requests for RewriteUpdate with any type of body
 func NewRewriteUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/rewrite/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafebrowsingDisableRequest generates requests for SafebrowsingDisable
 func NewSafebrowsingDisableRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safebrowsing/disable")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafebrowsingEnableRequest generates requests for SafebrowsingEnable
 func NewSafebrowsingEnableRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safebrowsing/enable")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafebrowsingStatusRequest generates requests for SafebrowsingStatus
 func NewSafebrowsingStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safebrowsing/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafesearchDisableRequest generates requests for SafesearchDisable
 func NewSafesearchDisableRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safesearch/disable")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafesearchEnableRequest generates requests for SafesearchEnable
 func NewSafesearchEnableRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safesearch/enable")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafesearchSettingsRequest calls the generic SafesearchSettings builder with application/json body
 func NewSafesearchSettingsRequest(server string, body SafesearchSettingsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewSafesearchSettingsRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafesearchSettingsRequestWithBody generates requests for SafesearchSettings with any type of body
 func NewSafesearchSettingsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safesearch/settings")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewSafesearchStatusRequest generates requests for SafesearchStatus
 func NewSafesearchStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/safesearch/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewStatsRequest generates requests for Stats
 func NewStatsRequest(server string, params *StatsParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/stats")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.Recent != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "recent", *params.Recent, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewGetStatsConfigRequest generates requests for GetStatsConfig
 func NewGetStatsConfigRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/stats/config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewPutStatsConfigRequest calls the generic PutStatsConfig builder with application/json body
 func NewPutStatsConfigRequest(server string, body PutStatsConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPutStatsConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewPutStatsConfigRequestWithBody generates requests for PutStatsConfig with any type of body
 func NewPutStatsConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/stats/config/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewStatsConfigRequest calls the generic StatsConfig builder with application/json body
 func NewStatsConfigRequest(server string, body StatsConfigJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewStatsConfigRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewStatsConfigRequestWithBody generates requests for StatsConfig with any type of body
 func NewStatsConfigRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/stats_config")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewStatsInfoRequest generates requests for StatsInfo
 func NewStatsInfoRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/stats_info")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewStatsResetRequest generates requests for StatsReset
 func NewStatsResetRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/stats_reset")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewStatusRequest generates requests for Status
 func NewStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTestUpstreamDNSRequest calls the generic TestUpstreamDNS builder with application/json body
 func NewTestUpstreamDNSRequest(server string, body TestUpstreamDNSJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewTestUpstreamDNSRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTestUpstreamDNSRequestWithBody generates requests for TestUpstreamDNS with any type of body
 func NewTestUpstreamDNSRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/test_upstream_dns")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTlsConfigureRequest calls the generic TlsConfigure builder with application/json body
 func NewTlsConfigureRequest(server string, body TlsConfigureJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewTlsConfigureRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTlsConfigureRequestWithBody generates requests for TlsConfigure with any type of body
 func NewTlsConfigureRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/tls/configure")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTlsStatusRequest generates requests for TlsStatus
 func NewTlsStatusRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/tls/status")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTlsValidateRequest calls the generic TlsValidate builder with application/json body
 func NewTlsValidateRequest(server string, body TlsValidateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewTlsValidateRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewTlsValidateRequestWithBody generates requests for TlsValidate with any type of body
 func NewTlsValidateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/tls/validate")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewBeginUpdateRequest generates requests for BeginUpdate
 func NewBeginUpdateRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewGetVersionJsonRequest calls the generic GetVersionJson builder with application/json body
 func NewGetVersionJsonRequest(server string, body GetVersionJsonJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewGetVersionJsonRequestWithBody(server, "application/json", bodyReader)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NewGetVersionJsonRequestWithBody generates requests for GetVersionJson with any type of body
 func NewGetVersionJsonRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/version.json")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *AdguardHomeClient) applyEditors(ctx context.Context, req *http.Request, additionalEditors []RequestEditorFn) error {
-	for _, r := range c.RequestEditors {
-		if err := r(ctx, req); err != nil {
-			return err
-		}
-	}
-	for _, r := range additionalEditors {
-		if err := r(ctx, req); err != nil {
-			return err
-		}
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6487,24 +3141,12 @@ type ClientWithResponses struct {
 // NewClientWithResponses creates a new ClientWithResponses, which wraps
 // Client with return type handling
 func NewClientWithResponses(server string, opts ...ClientOption) (*ClientWithResponses, error) {
-	client, err := NewClient(server, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return &ClientWithResponses{client}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // WithBaseURL overrides the baseURL.
-func WithBaseURL(baseURL string) ClientOption {
-	return func(c *AdguardHomeClient) error {
-		newBaseURL, err := url.Parse(baseURL)
-		if err != nil {
-			return err
-		}
-		c.Server = newBaseURL.String()
-		return nil
-	}
-}
+func WithBaseURL(baseURL string) ClientOption { _ = "STUB: not implemented"; return *new(ClientOption) }
 
 // ClientWithResponsesInterface is the interface specification for the client with responses above.
 type ClientWithResponsesInterface interface {
@@ -6835,20 +3477,10 @@ type AccessListResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r AccessListResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r AccessListResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r AccessListResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r AccessListResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type AccessSetResp struct {
 	Body         []byte
@@ -6856,20 +3488,10 @@ type AccessSetResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r AccessSetResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r AccessSetResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r AccessSetResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r AccessSetResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type MobileConfigDoHResp struct {
 	Body         []byte
@@ -6878,20 +3500,10 @@ type MobileConfigDoHResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r MobileConfigDoHResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r MobileConfigDoHResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r MobileConfigDoHResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r MobileConfigDoHResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type MobileConfigDoTResp struct {
 	Body         []byte
@@ -6900,20 +3512,10 @@ type MobileConfigDoTResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r MobileConfigDoTResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r MobileConfigDoTResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r MobileConfigDoTResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r MobileConfigDoTResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BlockedServicesAllResp struct {
 	Body         []byte
@@ -6922,20 +3524,10 @@ type BlockedServicesAllResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BlockedServicesAllResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BlockedServicesAllResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BlockedServicesAllResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BlockedServicesAllResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BlockedServicesScheduleResp struct {
 	Body         []byte
@@ -6944,20 +3536,10 @@ type BlockedServicesScheduleResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BlockedServicesScheduleResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BlockedServicesScheduleResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BlockedServicesScheduleResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BlockedServicesScheduleResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BlockedServicesListResp struct {
 	Body         []byte
@@ -6966,20 +3548,10 @@ type BlockedServicesListResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BlockedServicesListResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BlockedServicesListResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BlockedServicesListResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BlockedServicesListResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BlockedServicesAvailableServicesResp struct {
 	Body         []byte
@@ -6988,20 +3560,10 @@ type BlockedServicesAvailableServicesResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BlockedServicesAvailableServicesResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BlockedServicesAvailableServicesResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BlockedServicesAvailableServicesResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BlockedServicesAvailableServicesResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BlockedServicesSetResp struct {
 	Body         []byte
@@ -7009,20 +3571,10 @@ type BlockedServicesSetResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BlockedServicesSetResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BlockedServicesSetResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BlockedServicesSetResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BlockedServicesSetResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BlockedServicesScheduleUpdateResp struct {
 	Body         []byte
@@ -7030,20 +3582,10 @@ type BlockedServicesScheduleUpdateResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BlockedServicesScheduleUpdateResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BlockedServicesScheduleUpdateResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BlockedServicesScheduleUpdateResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BlockedServicesScheduleUpdateResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type CacheClearResp struct {
 	Body         []byte
@@ -7051,20 +3593,10 @@ type CacheClearResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r CacheClearResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r CacheClearResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r CacheClearResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r CacheClearResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ClientsStatusResp struct {
 	Body         []byte
@@ -7073,20 +3605,10 @@ type ClientsStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ClientsStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ClientsStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ClientsStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ClientsStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ClientsAddResp struct {
 	Body         []byte
@@ -7094,20 +3616,10 @@ type ClientsAddResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ClientsAddResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ClientsAddResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ClientsAddResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ClientsAddResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ClientsDeleteResp struct {
 	Body         []byte
@@ -7115,20 +3627,10 @@ type ClientsDeleteResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ClientsDeleteResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ClientsDeleteResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ClientsDeleteResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ClientsDeleteResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ClientsFindResp struct {
 	Body         []byte
@@ -7137,20 +3639,10 @@ type ClientsFindResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ClientsFindResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ClientsFindResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ClientsFindResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ClientsFindResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ClientsSearchResp struct {
 	Body         []byte
@@ -7159,20 +3651,10 @@ type ClientsSearchResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ClientsSearchResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ClientsSearchResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ClientsSearchResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ClientsSearchResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ClientsUpdateResp struct {
 	Body         []byte
@@ -7180,20 +3662,10 @@ type ClientsUpdateResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ClientsUpdateResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ClientsUpdateResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ClientsUpdateResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ClientsUpdateResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpAddStaticLeaseResp struct {
 	Body         []byte
@@ -7202,20 +3674,10 @@ type DhcpAddStaticLeaseResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpAddStaticLeaseResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpAddStaticLeaseResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpAddStaticLeaseResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpAddStaticLeaseResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type CheckActiveDhcpResp struct {
 	Body         []byte
@@ -7225,20 +3687,10 @@ type CheckActiveDhcpResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r CheckActiveDhcpResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r CheckActiveDhcpResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r CheckActiveDhcpResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r CheckActiveDhcpResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpInterfacesResp struct {
 	Body         []byte
@@ -7248,20 +3700,10 @@ type DhcpInterfacesResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpInterfacesResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpInterfacesResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpInterfacesResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpInterfacesResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpRemoveStaticLeaseResp struct {
 	Body         []byte
@@ -7270,20 +3712,10 @@ type DhcpRemoveStaticLeaseResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpRemoveStaticLeaseResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpRemoveStaticLeaseResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpRemoveStaticLeaseResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpRemoveStaticLeaseResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpResetResp struct {
 	Body         []byte
@@ -7292,20 +3724,10 @@ type DhcpResetResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpResetResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpResetResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpResetResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpResetResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpResetLeasesResp struct {
 	Body         []byte
@@ -7314,20 +3736,10 @@ type DhcpResetLeasesResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpResetLeasesResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpResetLeasesResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpResetLeasesResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpResetLeasesResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpSetConfigResp struct {
 	Body         []byte
@@ -7336,20 +3748,10 @@ type DhcpSetConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpSetConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpSetConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpSetConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpSetConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpStatusResp struct {
 	Body         []byte
@@ -7359,20 +3761,10 @@ type DhcpStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DhcpUpdateStaticLeaseResp struct {
 	Body         []byte
@@ -7381,20 +3773,10 @@ type DhcpUpdateStaticLeaseResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DhcpUpdateStaticLeaseResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DhcpUpdateStaticLeaseResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DhcpUpdateStaticLeaseResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DhcpUpdateStaticLeaseResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DnsConfigResp struct {
 	Body         []byte
@@ -7402,20 +3784,10 @@ type DnsConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DnsConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DnsConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DnsConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DnsConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type DnsInfoResp struct {
 	Body         []byte
@@ -7424,20 +3796,10 @@ type DnsInfoResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r DnsInfoResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r DnsInfoResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DnsInfoResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r DnsInfoResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringAddURLResp struct {
 	Body         []byte
@@ -7445,20 +3807,10 @@ type FilteringAddURLResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringAddURLResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringAddURLResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringAddURLResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringAddURLResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringCheckHostResp struct {
 	Body         []byte
@@ -7467,20 +3819,10 @@ type FilteringCheckHostResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringCheckHostResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringCheckHostResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringCheckHostResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringCheckHostResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringConfigResp struct {
 	Body         []byte
@@ -7488,20 +3830,10 @@ type FilteringConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringRefreshResp struct {
 	Body         []byte
@@ -7510,20 +3842,10 @@ type FilteringRefreshResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringRefreshResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringRefreshResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringRefreshResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringRefreshResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringRemoveURLResp struct {
 	Body         []byte
@@ -7531,20 +3853,10 @@ type FilteringRemoveURLResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringRemoveURLResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringRemoveURLResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringRemoveURLResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringRemoveURLResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringSetRulesResp struct {
 	Body         []byte
@@ -7552,20 +3864,10 @@ type FilteringSetRulesResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringSetRulesResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringSetRulesResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringSetRulesResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringSetRulesResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringSetURLResp struct {
 	Body         []byte
@@ -7573,20 +3875,10 @@ type FilteringSetURLResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringSetURLResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringSetURLResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringSetURLResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringSetURLResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type FilteringStatusResp struct {
 	Body         []byte
@@ -7595,20 +3887,10 @@ type FilteringStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r FilteringStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r FilteringStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r FilteringStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r FilteringStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ChangeLanguageResp struct {
 	Body         []byte
@@ -7616,20 +3898,10 @@ type ChangeLanguageResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ChangeLanguageResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ChangeLanguageResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ChangeLanguageResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ChangeLanguageResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type CurrentLanguageResp struct {
 	Body         []byte
@@ -7638,20 +3910,10 @@ type CurrentLanguageResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r CurrentLanguageResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r CurrentLanguageResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r CurrentLanguageResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r CurrentLanguageResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type InstallCheckConfigResp struct {
 	Body         []byte
@@ -7660,20 +3922,10 @@ type InstallCheckConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r InstallCheckConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r InstallCheckConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r InstallCheckConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r InstallCheckConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type InstallConfigureResp struct {
 	Body         []byte
@@ -7681,20 +3933,10 @@ type InstallConfigureResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r InstallConfigureResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r InstallConfigureResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r InstallConfigureResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r InstallConfigureResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type InstallGetAddressesResp struct {
 	Body         []byte
@@ -7703,20 +3945,10 @@ type InstallGetAddressesResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r InstallGetAddressesResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r InstallGetAddressesResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r InstallGetAddressesResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r InstallGetAddressesResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type LoginResp struct {
 	Body         []byte
@@ -7724,20 +3956,10 @@ type LoginResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r LoginResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r LoginResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r LoginResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r LoginResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type LogoutResp struct {
 	Body         []byte
@@ -7745,20 +3967,10 @@ type LogoutResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r LogoutResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r LogoutResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r LogoutResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r LogoutResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ParentalDisableResp struct {
 	Body         []byte
@@ -7766,20 +3978,10 @@ type ParentalDisableResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ParentalDisableResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ParentalDisableResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ParentalDisableResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ParentalDisableResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ParentalEnableResp struct {
 	Body         []byte
@@ -7787,20 +3989,10 @@ type ParentalEnableResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ParentalEnableResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ParentalEnableResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ParentalEnableResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ParentalEnableResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type ParentalStatusResp struct {
 	Body         []byte
@@ -7812,20 +4004,10 @@ type ParentalStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r ParentalStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r ParentalStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r ParentalStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r ParentalStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type GetProfileResp struct {
 	Body         []byte
@@ -7834,20 +4016,10 @@ type GetProfileResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r GetProfileResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r GetProfileResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetProfileResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r GetProfileResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type UpdateProfileResp struct {
 	Body         []byte
@@ -7855,20 +4027,10 @@ type UpdateProfileResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r UpdateProfileResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r UpdateProfileResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r UpdateProfileResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r UpdateProfileResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SetProtectionResp struct {
 	Body         []byte
@@ -7876,20 +4038,10 @@ type SetProtectionResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SetProtectionResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SetProtectionResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SetProtectionResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SetProtectionResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type QueryLogResp struct {
 	Body         []byte
@@ -7898,20 +4050,10 @@ type QueryLogResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r QueryLogResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r QueryLogResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r QueryLogResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r QueryLogResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type GetQueryLogConfigResp struct {
 	Body         []byte
@@ -7920,20 +4062,10 @@ type GetQueryLogConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r GetQueryLogConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r GetQueryLogConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetQueryLogConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r GetQueryLogConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type PutQueryLogConfigResp struct {
 	Body         []byte
@@ -7941,20 +4073,10 @@ type PutQueryLogConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r PutQueryLogConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r PutQueryLogConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r PutQueryLogConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r PutQueryLogConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type QuerylogClearResp struct {
 	Body         []byte
@@ -7962,20 +4084,10 @@ type QuerylogClearResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r QuerylogClearResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r QuerylogClearResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r QuerylogClearResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r QuerylogClearResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type QueryLogConfigResp struct {
 	Body         []byte
@@ -7983,20 +4095,10 @@ type QueryLogConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r QueryLogConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r QueryLogConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r QueryLogConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r QueryLogConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type QueryLogInfoResp struct {
 	Body         []byte
@@ -8005,20 +4107,10 @@ type QueryLogInfoResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r QueryLogInfoResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r QueryLogInfoResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r QueryLogInfoResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r QueryLogInfoResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type RewriteAddResp struct {
 	Body         []byte
@@ -8026,20 +4118,10 @@ type RewriteAddResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r RewriteAddResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r RewriteAddResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r RewriteAddResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r RewriteAddResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type RewriteDeleteResp struct {
 	Body         []byte
@@ -8047,20 +4129,10 @@ type RewriteDeleteResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r RewriteDeleteResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r RewriteDeleteResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r RewriteDeleteResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r RewriteDeleteResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type RewriteListResp struct {
 	Body         []byte
@@ -8069,20 +4141,10 @@ type RewriteListResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r RewriteListResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r RewriteListResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r RewriteListResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r RewriteListResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type RewriteSettingsGetResp struct {
 	Body         []byte
@@ -8091,20 +4153,10 @@ type RewriteSettingsGetResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r RewriteSettingsGetResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r RewriteSettingsGetResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r RewriteSettingsGetResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r RewriteSettingsGetResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type RewriteSettingsUpdateResp struct {
 	Body         []byte
@@ -8112,20 +4164,10 @@ type RewriteSettingsUpdateResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r RewriteSettingsUpdateResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r RewriteSettingsUpdateResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r RewriteSettingsUpdateResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r RewriteSettingsUpdateResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type RewriteUpdateResp struct {
 	Body         []byte
@@ -8133,20 +4175,10 @@ type RewriteUpdateResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r RewriteUpdateResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r RewriteUpdateResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r RewriteUpdateResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r RewriteUpdateResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafebrowsingDisableResp struct {
 	Body         []byte
@@ -8154,20 +4186,10 @@ type SafebrowsingDisableResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafebrowsingDisableResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafebrowsingDisableResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafebrowsingDisableResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafebrowsingDisableResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafebrowsingEnableResp struct {
 	Body         []byte
@@ -8175,20 +4197,10 @@ type SafebrowsingEnableResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafebrowsingEnableResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafebrowsingEnableResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafebrowsingEnableResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafebrowsingEnableResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafebrowsingStatusResp struct {
 	Body         []byte
@@ -8199,20 +4211,10 @@ type SafebrowsingStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafebrowsingStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafebrowsingStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafebrowsingStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafebrowsingStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafesearchDisableResp struct {
 	Body         []byte
@@ -8220,20 +4222,10 @@ type SafesearchDisableResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafesearchDisableResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafesearchDisableResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafesearchDisableResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafesearchDisableResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafesearchEnableResp struct {
 	Body         []byte
@@ -8241,20 +4233,10 @@ type SafesearchEnableResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafesearchEnableResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafesearchEnableResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafesearchEnableResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafesearchEnableResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafesearchSettingsResp struct {
 	Body         []byte
@@ -8262,20 +4244,10 @@ type SafesearchSettingsResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafesearchSettingsResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafesearchSettingsResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafesearchSettingsResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafesearchSettingsResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type SafesearchStatusResp struct {
 	Body         []byte
@@ -8284,20 +4256,10 @@ type SafesearchStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r SafesearchStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r SafesearchStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r SafesearchStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r SafesearchStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type StatsResp struct {
 	Body         []byte
@@ -8306,20 +4268,10 @@ type StatsResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r StatsResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r StatsResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r StatsResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r StatsResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type GetStatsConfigResp struct {
 	Body         []byte
@@ -8328,20 +4280,10 @@ type GetStatsConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r GetStatsConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r GetStatsConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetStatsConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r GetStatsConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type PutStatsConfigResp struct {
 	Body         []byte
@@ -8349,20 +4291,10 @@ type PutStatsConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r PutStatsConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r PutStatsConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r PutStatsConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r PutStatsConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type StatsConfigResp struct {
 	Body         []byte
@@ -8370,20 +4302,10 @@ type StatsConfigResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r StatsConfigResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r StatsConfigResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r StatsConfigResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r StatsConfigResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type StatsInfoResp struct {
 	Body         []byte
@@ -8392,20 +4314,10 @@ type StatsInfoResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r StatsInfoResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r StatsInfoResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r StatsInfoResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r StatsInfoResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type StatsResetResp struct {
 	Body         []byte
@@ -8413,20 +4325,10 @@ type StatsResetResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r StatsResetResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r StatsResetResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r StatsResetResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r StatsResetResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type StatusResp struct {
 	Body         []byte
@@ -8435,20 +4337,10 @@ type StatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r StatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r StatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r StatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r StatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type TestUpstreamDNSResp struct {
 	Body         []byte
@@ -8457,20 +4349,10 @@ type TestUpstreamDNSResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r TestUpstreamDNSResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r TestUpstreamDNSResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r TestUpstreamDNSResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r TestUpstreamDNSResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type TlsConfigureResp struct {
 	Body         []byte
@@ -8479,20 +4361,10 @@ type TlsConfigureResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r TlsConfigureResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r TlsConfigureResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r TlsConfigureResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r TlsConfigureResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type TlsStatusResp struct {
 	Body         []byte
@@ -8501,20 +4373,10 @@ type TlsStatusResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r TlsStatusResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r TlsStatusResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r TlsStatusResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r TlsStatusResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type TlsValidateResp struct {
 	Body         []byte
@@ -8523,20 +4385,10 @@ type TlsValidateResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r TlsValidateResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r TlsValidateResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r TlsValidateResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r TlsValidateResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type BeginUpdateResp struct {
 	Body         []byte
@@ -8544,20 +4396,10 @@ type BeginUpdateResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r BeginUpdateResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r BeginUpdateResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r BeginUpdateResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r BeginUpdateResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 type GetVersionJsonResp struct {
 	Body         []byte
@@ -8566,2812 +4408,1169 @@ type GetVersionJsonResp struct {
 }
 
 // Status returns HTTPResponse.Status
-func (r GetVersionJsonResp) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
+func (r GetVersionJsonResp) Status() string { _ = "STUB: not implemented"; return "" }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetVersionJsonResp) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
+func (r GetVersionJsonResp) StatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // AccessListWithResponse request returning *AccessListResp
 func (c *ClientWithResponses) AccessListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccessListResp, error) {
-	rsp, err := c.AccessList(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccessListResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // AccessSetWithBodyWithResponse request with arbitrary body returning *AccessSetResp
 func (c *ClientWithResponses) AccessSetWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AccessSetResp, error) {
-	rsp, err := c.AccessSetWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccessSetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) AccessSetWithResponse(ctx context.Context, body AccessSetJSONRequestBody, reqEditors ...RequestEditorFn) (*AccessSetResp, error) {
-	rsp, err := c.AccessSet(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccessSetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // MobileConfigDoHWithResponse request returning *MobileConfigDoHResp
 func (c *ClientWithResponses) MobileConfigDoHWithResponse(ctx context.Context, params *MobileConfigDoHParams, reqEditors ...RequestEditorFn) (*MobileConfigDoHResp, error) {
-	rsp, err := c.MobileConfigDoH(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseMobileConfigDoHResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // MobileConfigDoTWithResponse request returning *MobileConfigDoTResp
 func (c *ClientWithResponses) MobileConfigDoTWithResponse(ctx context.Context, params *MobileConfigDoTParams, reqEditors ...RequestEditorFn) (*MobileConfigDoTResp, error) {
-	rsp, err := c.MobileConfigDoT(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseMobileConfigDoTResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BlockedServicesAllWithResponse request returning *BlockedServicesAllResp
 func (c *ClientWithResponses) BlockedServicesAllWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*BlockedServicesAllResp, error) {
-	rsp, err := c.BlockedServicesAll(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesAllResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BlockedServicesScheduleWithResponse request returning *BlockedServicesScheduleResp
 func (c *ClientWithResponses) BlockedServicesScheduleWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*BlockedServicesScheduleResp, error) {
-	rsp, err := c.BlockedServicesSchedule(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesScheduleResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BlockedServicesListWithResponse request returning *BlockedServicesListResp
 func (c *ClientWithResponses) BlockedServicesListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*BlockedServicesListResp, error) {
-	rsp, err := c.BlockedServicesList(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesListResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BlockedServicesAvailableServicesWithResponse request returning *BlockedServicesAvailableServicesResp
 func (c *ClientWithResponses) BlockedServicesAvailableServicesWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*BlockedServicesAvailableServicesResp, error) {
-	rsp, err := c.BlockedServicesAvailableServices(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesAvailableServicesResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BlockedServicesSetWithBodyWithResponse request with arbitrary body returning *BlockedServicesSetResp
 func (c *ClientWithResponses) BlockedServicesSetWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*BlockedServicesSetResp, error) {
-	rsp, err := c.BlockedServicesSetWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesSetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) BlockedServicesSetWithResponse(ctx context.Context, body BlockedServicesSetJSONRequestBody, reqEditors ...RequestEditorFn) (*BlockedServicesSetResp, error) {
-	rsp, err := c.BlockedServicesSet(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesSetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BlockedServicesScheduleUpdateWithBodyWithResponse request with arbitrary body returning *BlockedServicesScheduleUpdateResp
 func (c *ClientWithResponses) BlockedServicesScheduleUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*BlockedServicesScheduleUpdateResp, error) {
-	rsp, err := c.BlockedServicesScheduleUpdateWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesScheduleUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) BlockedServicesScheduleUpdateWithResponse(ctx context.Context, body BlockedServicesScheduleUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*BlockedServicesScheduleUpdateResp, error) {
-	rsp, err := c.BlockedServicesScheduleUpdate(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBlockedServicesScheduleUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // CacheClearWithResponse request returning *CacheClearResp
 func (c *ClientWithResponses) CacheClearWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*CacheClearResp, error) {
-	rsp, err := c.CacheClear(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCacheClearResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ClientsStatusWithResponse request returning *ClientsStatusResp
 func (c *ClientWithResponses) ClientsStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ClientsStatusResp, error) {
-	rsp, err := c.ClientsStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ClientsAddWithBodyWithResponse request with arbitrary body returning *ClientsAddResp
 func (c *ClientWithResponses) ClientsAddWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClientsAddResp, error) {
-	rsp, err := c.ClientsAddWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsAddResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) ClientsAddWithResponse(ctx context.Context, body ClientsAddJSONRequestBody, reqEditors ...RequestEditorFn) (*ClientsAddResp, error) {
-	rsp, err := c.ClientsAdd(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsAddResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ClientsDeleteWithBodyWithResponse request with arbitrary body returning *ClientsDeleteResp
 func (c *ClientWithResponses) ClientsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClientsDeleteResp, error) {
-	rsp, err := c.ClientsDeleteWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsDeleteResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) ClientsDeleteWithResponse(ctx context.Context, body ClientsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ClientsDeleteResp, error) {
-	rsp, err := c.ClientsDelete(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsDeleteResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ClientsFindWithResponse request returning *ClientsFindResp
 func (c *ClientWithResponses) ClientsFindWithResponse(ctx context.Context, params *ClientsFindParams, reqEditors ...RequestEditorFn) (*ClientsFindResp, error) {
-	rsp, err := c.ClientsFind(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsFindResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ClientsSearchWithBodyWithResponse request with arbitrary body returning *ClientsSearchResp
 func (c *ClientWithResponses) ClientsSearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClientsSearchResp, error) {
-	rsp, err := c.ClientsSearchWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsSearchResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) ClientsSearchWithResponse(ctx context.Context, body ClientsSearchJSONRequestBody, reqEditors ...RequestEditorFn) (*ClientsSearchResp, error) {
-	rsp, err := c.ClientsSearch(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsSearchResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ClientsUpdateWithBodyWithResponse request with arbitrary body returning *ClientsUpdateResp
 func (c *ClientWithResponses) ClientsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClientsUpdateResp, error) {
-	rsp, err := c.ClientsUpdateWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) ClientsUpdateWithResponse(ctx context.Context, body ClientsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*ClientsUpdateResp, error) {
-	rsp, err := c.ClientsUpdate(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClientsUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpAddStaticLeaseWithBodyWithResponse request with arbitrary body returning *DhcpAddStaticLeaseResp
 func (c *ClientWithResponses) DhcpAddStaticLeaseWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DhcpAddStaticLeaseResp, error) {
-	rsp, err := c.DhcpAddStaticLeaseWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpAddStaticLeaseResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) DhcpAddStaticLeaseWithResponse(ctx context.Context, body DhcpAddStaticLeaseJSONRequestBody, reqEditors ...RequestEditorFn) (*DhcpAddStaticLeaseResp, error) {
-	rsp, err := c.DhcpAddStaticLease(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpAddStaticLeaseResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // CheckActiveDhcpWithBodyWithResponse request with arbitrary body returning *CheckActiveDhcpResp
 func (c *ClientWithResponses) CheckActiveDhcpWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CheckActiveDhcpResp, error) {
-	rsp, err := c.CheckActiveDhcpWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCheckActiveDhcpResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) CheckActiveDhcpWithResponse(ctx context.Context, body CheckActiveDhcpJSONRequestBody, reqEditors ...RequestEditorFn) (*CheckActiveDhcpResp, error) {
-	rsp, err := c.CheckActiveDhcp(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCheckActiveDhcpResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpInterfacesWithResponse request returning *DhcpInterfacesResp
 func (c *ClientWithResponses) DhcpInterfacesWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DhcpInterfacesResp, error) {
-	rsp, err := c.DhcpInterfaces(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpInterfacesResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpRemoveStaticLeaseWithBodyWithResponse request with arbitrary body returning *DhcpRemoveStaticLeaseResp
 func (c *ClientWithResponses) DhcpRemoveStaticLeaseWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DhcpRemoveStaticLeaseResp, error) {
-	rsp, err := c.DhcpRemoveStaticLeaseWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpRemoveStaticLeaseResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) DhcpRemoveStaticLeaseWithResponse(ctx context.Context, body DhcpRemoveStaticLeaseJSONRequestBody, reqEditors ...RequestEditorFn) (*DhcpRemoveStaticLeaseResp, error) {
-	rsp, err := c.DhcpRemoveStaticLease(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpRemoveStaticLeaseResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpResetWithResponse request returning *DhcpResetResp
 func (c *ClientWithResponses) DhcpResetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DhcpResetResp, error) {
-	rsp, err := c.DhcpReset(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpResetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpResetLeasesWithResponse request returning *DhcpResetLeasesResp
 func (c *ClientWithResponses) DhcpResetLeasesWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DhcpResetLeasesResp, error) {
-	rsp, err := c.DhcpResetLeases(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpResetLeasesResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpSetConfigWithBodyWithResponse request with arbitrary body returning *DhcpSetConfigResp
 func (c *ClientWithResponses) DhcpSetConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DhcpSetConfigResp, error) {
-	rsp, err := c.DhcpSetConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpSetConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) DhcpSetConfigWithResponse(ctx context.Context, body DhcpSetConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*DhcpSetConfigResp, error) {
-	rsp, err := c.DhcpSetConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpSetConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpStatusWithResponse request returning *DhcpStatusResp
 func (c *ClientWithResponses) DhcpStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DhcpStatusResp, error) {
-	rsp, err := c.DhcpStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DhcpUpdateStaticLeaseWithBodyWithResponse request with arbitrary body returning *DhcpUpdateStaticLeaseResp
 func (c *ClientWithResponses) DhcpUpdateStaticLeaseWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DhcpUpdateStaticLeaseResp, error) {
-	rsp, err := c.DhcpUpdateStaticLeaseWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpUpdateStaticLeaseResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) DhcpUpdateStaticLeaseWithResponse(ctx context.Context, body DhcpUpdateStaticLeaseJSONRequestBody, reqEditors ...RequestEditorFn) (*DhcpUpdateStaticLeaseResp, error) {
-	rsp, err := c.DhcpUpdateStaticLease(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDhcpUpdateStaticLeaseResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DnsConfigWithBodyWithResponse request with arbitrary body returning *DnsConfigResp
 func (c *ClientWithResponses) DnsConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DnsConfigResp, error) {
-	rsp, err := c.DnsConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDnsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) DnsConfigWithResponse(ctx context.Context, body DnsConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*DnsConfigResp, error) {
-	rsp, err := c.DnsConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDnsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DnsInfoWithResponse request returning *DnsInfoResp
 func (c *ClientWithResponses) DnsInfoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*DnsInfoResp, error) {
-	rsp, err := c.DnsInfo(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDnsInfoResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringAddURLWithBodyWithResponse request with arbitrary body returning *FilteringAddURLResp
 func (c *ClientWithResponses) FilteringAddURLWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FilteringAddURLResp, error) {
-	rsp, err := c.FilteringAddURLWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringAddURLResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) FilteringAddURLWithResponse(ctx context.Context, body FilteringAddURLJSONRequestBody, reqEditors ...RequestEditorFn) (*FilteringAddURLResp, error) {
-	rsp, err := c.FilteringAddURL(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringAddURLResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringCheckHostWithResponse request returning *FilteringCheckHostResp
 func (c *ClientWithResponses) FilteringCheckHostWithResponse(ctx context.Context, params *FilteringCheckHostParams, reqEditors ...RequestEditorFn) (*FilteringCheckHostResp, error) {
-	rsp, err := c.FilteringCheckHost(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringCheckHostResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringConfigWithBodyWithResponse request with arbitrary body returning *FilteringConfigResp
 func (c *ClientWithResponses) FilteringConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FilteringConfigResp, error) {
-	rsp, err := c.FilteringConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) FilteringConfigWithResponse(ctx context.Context, body FilteringConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*FilteringConfigResp, error) {
-	rsp, err := c.FilteringConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringRefreshWithBodyWithResponse request with arbitrary body returning *FilteringRefreshResp
 func (c *ClientWithResponses) FilteringRefreshWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FilteringRefreshResp, error) {
-	rsp, err := c.FilteringRefreshWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringRefreshResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) FilteringRefreshWithResponse(ctx context.Context, body FilteringRefreshJSONRequestBody, reqEditors ...RequestEditorFn) (*FilteringRefreshResp, error) {
-	rsp, err := c.FilteringRefresh(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringRefreshResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringRemoveURLWithBodyWithResponse request with arbitrary body returning *FilteringRemoveURLResp
 func (c *ClientWithResponses) FilteringRemoveURLWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FilteringRemoveURLResp, error) {
-	rsp, err := c.FilteringRemoveURLWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringRemoveURLResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) FilteringRemoveURLWithResponse(ctx context.Context, body FilteringRemoveURLJSONRequestBody, reqEditors ...RequestEditorFn) (*FilteringRemoveURLResp, error) {
-	rsp, err := c.FilteringRemoveURL(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringRemoveURLResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringSetRulesWithBodyWithResponse request with arbitrary body returning *FilteringSetRulesResp
 func (c *ClientWithResponses) FilteringSetRulesWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FilteringSetRulesResp, error) {
-	rsp, err := c.FilteringSetRulesWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringSetRulesResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) FilteringSetRulesWithResponse(ctx context.Context, body FilteringSetRulesJSONRequestBody, reqEditors ...RequestEditorFn) (*FilteringSetRulesResp, error) {
-	rsp, err := c.FilteringSetRules(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringSetRulesResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringSetURLWithBodyWithResponse request with arbitrary body returning *FilteringSetURLResp
 func (c *ClientWithResponses) FilteringSetURLWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FilteringSetURLResp, error) {
-	rsp, err := c.FilteringSetURLWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringSetURLResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) FilteringSetURLWithResponse(ctx context.Context, body FilteringSetURLJSONRequestBody, reqEditors ...RequestEditorFn) (*FilteringSetURLResp, error) {
-	rsp, err := c.FilteringSetURL(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringSetURLResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // FilteringStatusWithResponse request returning *FilteringStatusResp
 func (c *ClientWithResponses) FilteringStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*FilteringStatusResp, error) {
-	rsp, err := c.FilteringStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseFilteringStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ChangeLanguageWithBodyWithResponse request with arbitrary body returning *ChangeLanguageResp
 func (c *ClientWithResponses) ChangeLanguageWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ChangeLanguageResp, error) {
-	rsp, err := c.ChangeLanguageWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseChangeLanguageResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) ChangeLanguageWithResponse(ctx context.Context, body ChangeLanguageJSONRequestBody, reqEditors ...RequestEditorFn) (*ChangeLanguageResp, error) {
-	rsp, err := c.ChangeLanguage(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseChangeLanguageResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // CurrentLanguageWithResponse request returning *CurrentLanguageResp
 func (c *ClientWithResponses) CurrentLanguageWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*CurrentLanguageResp, error) {
-	rsp, err := c.CurrentLanguage(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCurrentLanguageResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // InstallCheckConfigWithBodyWithResponse request with arbitrary body returning *InstallCheckConfigResp
 func (c *ClientWithResponses) InstallCheckConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*InstallCheckConfigResp, error) {
-	rsp, err := c.InstallCheckConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseInstallCheckConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) InstallCheckConfigWithResponse(ctx context.Context, body InstallCheckConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*InstallCheckConfigResp, error) {
-	rsp, err := c.InstallCheckConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseInstallCheckConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // InstallConfigureWithBodyWithResponse request with arbitrary body returning *InstallConfigureResp
 func (c *ClientWithResponses) InstallConfigureWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*InstallConfigureResp, error) {
-	rsp, err := c.InstallConfigureWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseInstallConfigureResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) InstallConfigureWithResponse(ctx context.Context, body InstallConfigureJSONRequestBody, reqEditors ...RequestEditorFn) (*InstallConfigureResp, error) {
-	rsp, err := c.InstallConfigure(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseInstallConfigureResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // InstallGetAddressesWithResponse request returning *InstallGetAddressesResp
 func (c *ClientWithResponses) InstallGetAddressesWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*InstallGetAddressesResp, error) {
-	rsp, err := c.InstallGetAddresses(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseInstallGetAddressesResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // LoginWithBodyWithResponse request with arbitrary body returning *LoginResp
 func (c *ClientWithResponses) LoginWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoginResp, error) {
-	rsp, err := c.LoginWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoginResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) LoginWithResponse(ctx context.Context, body LoginJSONRequestBody, reqEditors ...RequestEditorFn) (*LoginResp, error) {
-	rsp, err := c.Login(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoginResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // LogoutWithResponse request returning *LogoutResp
 func (c *ClientWithResponses) LogoutWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*LogoutResp, error) {
-	rsp, err := c.Logout(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLogoutResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParentalDisableWithResponse request returning *ParentalDisableResp
 func (c *ClientWithResponses) ParentalDisableWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ParentalDisableResp, error) {
-	rsp, err := c.ParentalDisable(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseParentalDisableResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParentalEnableWithResponse request returning *ParentalEnableResp
 func (c *ClientWithResponses) ParentalEnableWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ParentalEnableResp, error) {
-	rsp, err := c.ParentalEnable(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseParentalEnableResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParentalStatusWithResponse request returning *ParentalStatusResp
 func (c *ClientWithResponses) ParentalStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ParentalStatusResp, error) {
-	rsp, err := c.ParentalStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseParentalStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetProfileWithResponse request returning *GetProfileResp
 func (c *ClientWithResponses) GetProfileWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetProfileResp, error) {
-	rsp, err := c.GetProfile(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetProfileResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UpdateProfileWithBodyWithResponse request with arbitrary body returning *UpdateProfileResp
 func (c *ClientWithResponses) UpdateProfileWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProfileResp, error) {
-	rsp, err := c.UpdateProfileWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseUpdateProfileResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) UpdateProfileWithResponse(ctx context.Context, body UpdateProfileJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProfileResp, error) {
-	rsp, err := c.UpdateProfile(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseUpdateProfileResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SetProtectionWithBodyWithResponse request with arbitrary body returning *SetProtectionResp
 func (c *ClientWithResponses) SetProtectionWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetProtectionResp, error) {
-	rsp, err := c.SetProtectionWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSetProtectionResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) SetProtectionWithResponse(ctx context.Context, body SetProtectionJSONRequestBody, reqEditors ...RequestEditorFn) (*SetProtectionResp, error) {
-	rsp, err := c.SetProtection(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSetProtectionResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // QueryLogWithResponse request returning *QueryLogResp
 func (c *ClientWithResponses) QueryLogWithResponse(ctx context.Context, params *QueryLogParams, reqEditors ...RequestEditorFn) (*QueryLogResp, error) {
-	rsp, err := c.QueryLog(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseQueryLogResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetQueryLogConfigWithResponse request returning *GetQueryLogConfigResp
 func (c *ClientWithResponses) GetQueryLogConfigWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetQueryLogConfigResp, error) {
-	rsp, err := c.GetQueryLogConfig(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetQueryLogConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // PutQueryLogConfigWithBodyWithResponse request with arbitrary body returning *PutQueryLogConfigResp
 func (c *ClientWithResponses) PutQueryLogConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutQueryLogConfigResp, error) {
-	rsp, err := c.PutQueryLogConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutQueryLogConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) PutQueryLogConfigWithResponse(ctx context.Context, body PutQueryLogConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*PutQueryLogConfigResp, error) {
-	rsp, err := c.PutQueryLogConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutQueryLogConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // QuerylogClearWithResponse request returning *QuerylogClearResp
 func (c *ClientWithResponses) QuerylogClearWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*QuerylogClearResp, error) {
-	rsp, err := c.QuerylogClear(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseQuerylogClearResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // QueryLogConfigWithBodyWithResponse request with arbitrary body returning *QueryLogConfigResp
 func (c *ClientWithResponses) QueryLogConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*QueryLogConfigResp, error) {
-	rsp, err := c.QueryLogConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseQueryLogConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) QueryLogConfigWithResponse(ctx context.Context, body QueryLogConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*QueryLogConfigResp, error) {
-	rsp, err := c.QueryLogConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseQueryLogConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // QueryLogInfoWithResponse request returning *QueryLogInfoResp
 func (c *ClientWithResponses) QueryLogInfoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*QueryLogInfoResp, error) {
-	rsp, err := c.QueryLogInfo(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseQueryLogInfoResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RewriteAddWithBodyWithResponse request with arbitrary body returning *RewriteAddResp
 func (c *ClientWithResponses) RewriteAddWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RewriteAddResp, error) {
-	rsp, err := c.RewriteAddWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteAddResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) RewriteAddWithResponse(ctx context.Context, body RewriteAddJSONRequestBody, reqEditors ...RequestEditorFn) (*RewriteAddResp, error) {
-	rsp, err := c.RewriteAdd(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteAddResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RewriteDeleteWithBodyWithResponse request with arbitrary body returning *RewriteDeleteResp
 func (c *ClientWithResponses) RewriteDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RewriteDeleteResp, error) {
-	rsp, err := c.RewriteDeleteWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteDeleteResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) RewriteDeleteWithResponse(ctx context.Context, body RewriteDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*RewriteDeleteResp, error) {
-	rsp, err := c.RewriteDelete(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteDeleteResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RewriteListWithResponse request returning *RewriteListResp
 func (c *ClientWithResponses) RewriteListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*RewriteListResp, error) {
-	rsp, err := c.RewriteList(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteListResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RewriteSettingsGetWithResponse request returning *RewriteSettingsGetResp
 func (c *ClientWithResponses) RewriteSettingsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*RewriteSettingsGetResp, error) {
-	rsp, err := c.RewriteSettingsGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteSettingsGetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RewriteSettingsUpdateWithBodyWithResponse request with arbitrary body returning *RewriteSettingsUpdateResp
 func (c *ClientWithResponses) RewriteSettingsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RewriteSettingsUpdateResp, error) {
-	rsp, err := c.RewriteSettingsUpdateWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteSettingsUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) RewriteSettingsUpdateWithResponse(ctx context.Context, body RewriteSettingsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*RewriteSettingsUpdateResp, error) {
-	rsp, err := c.RewriteSettingsUpdate(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteSettingsUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RewriteUpdateWithBodyWithResponse request with arbitrary body returning *RewriteUpdateResp
 func (c *ClientWithResponses) RewriteUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RewriteUpdateResp, error) {
-	rsp, err := c.RewriteUpdateWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) RewriteUpdateWithResponse(ctx context.Context, body RewriteUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*RewriteUpdateResp, error) {
-	rsp, err := c.RewriteUpdate(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRewriteUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafebrowsingDisableWithResponse request returning *SafebrowsingDisableResp
 func (c *ClientWithResponses) SafebrowsingDisableWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SafebrowsingDisableResp, error) {
-	rsp, err := c.SafebrowsingDisable(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafebrowsingDisableResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafebrowsingEnableWithResponse request returning *SafebrowsingEnableResp
 func (c *ClientWithResponses) SafebrowsingEnableWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SafebrowsingEnableResp, error) {
-	rsp, err := c.SafebrowsingEnable(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafebrowsingEnableResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafebrowsingStatusWithResponse request returning *SafebrowsingStatusResp
 func (c *ClientWithResponses) SafebrowsingStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SafebrowsingStatusResp, error) {
-	rsp, err := c.SafebrowsingStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafebrowsingStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafesearchDisableWithResponse request returning *SafesearchDisableResp
 func (c *ClientWithResponses) SafesearchDisableWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SafesearchDisableResp, error) {
-	rsp, err := c.SafesearchDisable(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafesearchDisableResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafesearchEnableWithResponse request returning *SafesearchEnableResp
 func (c *ClientWithResponses) SafesearchEnableWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SafesearchEnableResp, error) {
-	rsp, err := c.SafesearchEnable(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafesearchEnableResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafesearchSettingsWithBodyWithResponse request with arbitrary body returning *SafesearchSettingsResp
 func (c *ClientWithResponses) SafesearchSettingsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SafesearchSettingsResp, error) {
-	rsp, err := c.SafesearchSettingsWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafesearchSettingsResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) SafesearchSettingsWithResponse(ctx context.Context, body SafesearchSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*SafesearchSettingsResp, error) {
-	rsp, err := c.SafesearchSettings(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafesearchSettingsResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // SafesearchStatusWithResponse request returning *SafesearchStatusResp
 func (c *ClientWithResponses) SafesearchStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SafesearchStatusResp, error) {
-	rsp, err := c.SafesearchStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSafesearchStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // StatsWithResponse request returning *StatsResp
 func (c *ClientWithResponses) StatsWithResponse(ctx context.Context, params *StatsParams, reqEditors ...RequestEditorFn) (*StatsResp, error) {
-	rsp, err := c.Stats(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseStatsResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetStatsConfigWithResponse request returning *GetStatsConfigResp
 func (c *ClientWithResponses) GetStatsConfigWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetStatsConfigResp, error) {
-	rsp, err := c.GetStatsConfig(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetStatsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // PutStatsConfigWithBodyWithResponse request with arbitrary body returning *PutStatsConfigResp
 func (c *ClientWithResponses) PutStatsConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutStatsConfigResp, error) {
-	rsp, err := c.PutStatsConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutStatsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) PutStatsConfigWithResponse(ctx context.Context, body PutStatsConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*PutStatsConfigResp, error) {
-	rsp, err := c.PutStatsConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutStatsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // StatsConfigWithBodyWithResponse request with arbitrary body returning *StatsConfigResp
 func (c *ClientWithResponses) StatsConfigWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StatsConfigResp, error) {
-	rsp, err := c.StatsConfigWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseStatsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) StatsConfigWithResponse(ctx context.Context, body StatsConfigJSONRequestBody, reqEditors ...RequestEditorFn) (*StatsConfigResp, error) {
-	rsp, err := c.StatsConfig(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseStatsConfigResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // StatsInfoWithResponse request returning *StatsInfoResp
 func (c *ClientWithResponses) StatsInfoWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*StatsInfoResp, error) {
-	rsp, err := c.StatsInfo(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseStatsInfoResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // StatsResetWithResponse request returning *StatsResetResp
 func (c *ClientWithResponses) StatsResetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*StatsResetResp, error) {
-	rsp, err := c.StatsReset(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseStatsResetResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // StatusWithResponse request returning *StatusResp
 func (c *ClientWithResponses) StatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*StatusResp, error) {
-	rsp, err := c.Status(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // TestUpstreamDNSWithBodyWithResponse request with arbitrary body returning *TestUpstreamDNSResp
 func (c *ClientWithResponses) TestUpstreamDNSWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TestUpstreamDNSResp, error) {
-	rsp, err := c.TestUpstreamDNSWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTestUpstreamDNSResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) TestUpstreamDNSWithResponse(ctx context.Context, body TestUpstreamDNSJSONRequestBody, reqEditors ...RequestEditorFn) (*TestUpstreamDNSResp, error) {
-	rsp, err := c.TestUpstreamDNS(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTestUpstreamDNSResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // TlsConfigureWithBodyWithResponse request with arbitrary body returning *TlsConfigureResp
 func (c *ClientWithResponses) TlsConfigureWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TlsConfigureResp, error) {
-	rsp, err := c.TlsConfigureWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTlsConfigureResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) TlsConfigureWithResponse(ctx context.Context, body TlsConfigureJSONRequestBody, reqEditors ...RequestEditorFn) (*TlsConfigureResp, error) {
-	rsp, err := c.TlsConfigure(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTlsConfigureResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // TlsStatusWithResponse request returning *TlsStatusResp
 func (c *ClientWithResponses) TlsStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*TlsStatusResp, error) {
-	rsp, err := c.TlsStatus(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTlsStatusResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // TlsValidateWithBodyWithResponse request with arbitrary body returning *TlsValidateResp
 func (c *ClientWithResponses) TlsValidateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TlsValidateResp, error) {
-	rsp, err := c.TlsValidateWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTlsValidateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) TlsValidateWithResponse(ctx context.Context, body TlsValidateJSONRequestBody, reqEditors ...RequestEditorFn) (*TlsValidateResp, error) {
-	rsp, err := c.TlsValidate(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseTlsValidateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BeginUpdateWithResponse request returning *BeginUpdateResp
 func (c *ClientWithResponses) BeginUpdateWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*BeginUpdateResp, error) {
-	rsp, err := c.BeginUpdate(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseBeginUpdateResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetVersionJsonWithBodyWithResponse request with arbitrary body returning *GetVersionJsonResp
 func (c *ClientWithResponses) GetVersionJsonWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GetVersionJsonResp, error) {
-	rsp, err := c.GetVersionJsonWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetVersionJsonResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientWithResponses) GetVersionJsonWithResponse(ctx context.Context, body GetVersionJsonJSONRequestBody, reqEditors ...RequestEditorFn) (*GetVersionJsonResp, error) {
-	rsp, err := c.GetVersionJson(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetVersionJsonResp(rsp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseAccessListResp parses an HTTP response from a AccessListWithResponse call
 func ParseAccessListResp(rsp *http.Response) (*AccessListResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &AccessListResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccessListResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseAccessSetResp parses an HTTP response from a AccessSetWithResponse call
 func ParseAccessSetResp(rsp *http.Response) (*AccessSetResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &AccessSetResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseMobileConfigDoHResp parses an HTTP response from a MobileConfigDoHWithResponse call
 func ParseMobileConfigDoHResp(rsp *http.Response) (*MobileConfigDoHResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &MobileConfigDoHResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON500 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseMobileConfigDoTResp parses an HTTP response from a MobileConfigDoTWithResponse call
 func ParseMobileConfigDoTResp(rsp *http.Response) (*MobileConfigDoTResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &MobileConfigDoTResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON500 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBlockedServicesAllResp parses an HTTP response from a BlockedServicesAllWithResponse call
 func ParseBlockedServicesAllResp(rsp *http.Response) (*BlockedServicesAllResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BlockedServicesAllResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BlockedServicesAll
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBlockedServicesScheduleResp parses an HTTP response from a BlockedServicesScheduleWithResponse call
 func ParseBlockedServicesScheduleResp(rsp *http.Response) (*BlockedServicesScheduleResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BlockedServicesScheduleResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BlockedServicesSchedule
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBlockedServicesListResp parses an HTTP response from a BlockedServicesListWithResponse call
 func ParseBlockedServicesListResp(rsp *http.Response) (*BlockedServicesListResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BlockedServicesListResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BlockedServicesArray
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBlockedServicesAvailableServicesResp parses an HTTP response from a BlockedServicesAvailableServicesWithResponse call
 func ParseBlockedServicesAvailableServicesResp(rsp *http.Response) (*BlockedServicesAvailableServicesResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BlockedServicesAvailableServicesResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BlockedServicesArray
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBlockedServicesSetResp parses an HTTP response from a BlockedServicesSetWithResponse call
 func ParseBlockedServicesSetResp(rsp *http.Response) (*BlockedServicesSetResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BlockedServicesSetResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBlockedServicesScheduleUpdateResp parses an HTTP response from a BlockedServicesScheduleUpdateWithResponse call
 func ParseBlockedServicesScheduleUpdateResp(rsp *http.Response) (*BlockedServicesScheduleUpdateResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BlockedServicesScheduleUpdateResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseCacheClearResp parses an HTTP response from a CacheClearWithResponse call
 func ParseCacheClearResp(rsp *http.Response) (*CacheClearResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &CacheClearResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseClientsStatusResp parses an HTTP response from a ClientsStatusWithResponse call
 func ParseClientsStatusResp(rsp *http.Response) (*ClientsStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClientsStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Clients
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseClientsAddResp parses an HTTP response from a ClientsAddWithResponse call
 func ParseClientsAddResp(rsp *http.Response) (*ClientsAddResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClientsAddResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseClientsDeleteResp parses an HTTP response from a ClientsDeleteWithResponse call
 func ParseClientsDeleteResp(rsp *http.Response) (*ClientsDeleteResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClientsDeleteResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseClientsFindResp parses an HTTP response from a ClientsFindWithResponse call
 func ParseClientsFindResp(rsp *http.Response) (*ClientsFindResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClientsFindResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ClientsFindResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseClientsSearchResp parses an HTTP response from a ClientsSearchWithResponse call
 func ParseClientsSearchResp(rsp *http.Response) (*ClientsSearchResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClientsSearchResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ClientsFindResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseClientsUpdateResp parses an HTTP response from a ClientsUpdateWithResponse call
 func ParseClientsUpdateResp(rsp *http.Response) (*ClientsUpdateResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClientsUpdateResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpAddStaticLeaseResp parses an HTTP response from a DhcpAddStaticLeaseWithResponse call
 func ParseDhcpAddStaticLeaseResp(rsp *http.Response) (*DhcpAddStaticLeaseResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpAddStaticLeaseResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseCheckActiveDhcpResp parses an HTTP response from a CheckActiveDhcpWithResponse call
 func ParseCheckActiveDhcpResp(rsp *http.Response) (*CheckActiveDhcpResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &CheckActiveDhcpResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DhcpSearchResult
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpInterfacesResp parses an HTTP response from a DhcpInterfacesWithResponse call
 func ParseDhcpInterfacesResp(rsp *http.Response) (*DhcpInterfacesResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpInterfacesResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest NetInterfaces
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON500 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpRemoveStaticLeaseResp parses an HTTP response from a DhcpRemoveStaticLeaseWithResponse call
 func ParseDhcpRemoveStaticLeaseResp(rsp *http.Response) (*DhcpRemoveStaticLeaseResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpRemoveStaticLeaseResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpResetResp parses an HTTP response from a DhcpResetWithResponse call
 func ParseDhcpResetResp(rsp *http.Response) (*DhcpResetResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpResetResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpResetLeasesResp parses an HTTP response from a DhcpResetLeasesWithResponse call
 func ParseDhcpResetLeasesResp(rsp *http.Response) (*DhcpResetLeasesResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpResetLeasesResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpSetConfigResp parses an HTTP response from a DhcpSetConfigWithResponse call
 func ParseDhcpSetConfigResp(rsp *http.Response) (*DhcpSetConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpSetConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpStatusResp parses an HTTP response from a DhcpStatusWithResponse call
 func ParseDhcpStatusResp(rsp *http.Response) (*DhcpStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DhcpStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON500 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDhcpUpdateStaticLeaseResp parses an HTTP response from a DhcpUpdateStaticLeaseWithResponse call
 func ParseDhcpUpdateStaticLeaseResp(rsp *http.Response) (*DhcpUpdateStaticLeaseResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DhcpUpdateStaticLeaseResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
-		var dest Error
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON501 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDnsConfigResp parses an HTTP response from a DnsConfigWithResponse call
 func ParseDnsConfigResp(rsp *http.Response) (*DnsConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DnsConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseDnsInfoResp parses an HTTP response from a DnsInfoWithResponse call
 func ParseDnsInfoResp(rsp *http.Response) (*DnsInfoResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DnsInfoResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DNSConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringAddURLResp parses an HTTP response from a FilteringAddURLWithResponse call
 func ParseFilteringAddURLResp(rsp *http.Response) (*FilteringAddURLResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringAddURLResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringCheckHostResp parses an HTTP response from a FilteringCheckHostWithResponse call
 func ParseFilteringCheckHostResp(rsp *http.Response) (*FilteringCheckHostResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringCheckHostResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilterCheckHostResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringConfigResp parses an HTTP response from a FilteringConfigWithResponse call
 func ParseFilteringConfigResp(rsp *http.Response) (*FilteringConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringRefreshResp parses an HTTP response from a FilteringRefreshWithResponse call
 func ParseFilteringRefreshResp(rsp *http.Response) (*FilteringRefreshResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringRefreshResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilterRefreshResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringRemoveURLResp parses an HTTP response from a FilteringRemoveURLWithResponse call
 func ParseFilteringRemoveURLResp(rsp *http.Response) (*FilteringRemoveURLResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringRemoveURLResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringSetRulesResp parses an HTTP response from a FilteringSetRulesWithResponse call
 func ParseFilteringSetRulesResp(rsp *http.Response) (*FilteringSetRulesResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringSetRulesResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringSetURLResp parses an HTTP response from a FilteringSetURLWithResponse call
 func ParseFilteringSetURLResp(rsp *http.Response) (*FilteringSetURLResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringSetURLResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseFilteringStatusResp parses an HTTP response from a FilteringStatusWithResponse call
 func ParseFilteringStatusResp(rsp *http.Response) (*FilteringStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &FilteringStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilterStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseChangeLanguageResp parses an HTTP response from a ChangeLanguageWithResponse call
 func ParseChangeLanguageResp(rsp *http.Response) (*ChangeLanguageResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ChangeLanguageResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseCurrentLanguageResp parses an HTTP response from a CurrentLanguageWithResponse call
 func ParseCurrentLanguageResp(rsp *http.Response) (*CurrentLanguageResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &CurrentLanguageResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest LanguageSettings
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseInstallCheckConfigResp parses an HTTP response from a InstallCheckConfigWithResponse call
 func ParseInstallCheckConfigResp(rsp *http.Response) (*InstallCheckConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &InstallCheckConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CheckConfigResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseInstallConfigureResp parses an HTTP response from a InstallConfigureWithResponse call
 func ParseInstallConfigureResp(rsp *http.Response) (*InstallConfigureResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &InstallConfigureResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseInstallGetAddressesResp parses an HTTP response from a InstallGetAddressesWithResponse call
 func ParseInstallGetAddressesResp(rsp *http.Response) (*InstallGetAddressesResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &InstallGetAddressesResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AddressesInfo
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseLoginResp parses an HTTP response from a LoginWithResponse call
 func ParseLoginResp(rsp *http.Response) (*LoginResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &LoginResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseLogoutResp parses an HTTP response from a LogoutWithResponse call
 func ParseLogoutResp(rsp *http.Response) (*LogoutResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &LogoutResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseParentalDisableResp parses an HTTP response from a ParentalDisableWithResponse call
 func ParseParentalDisableResp(rsp *http.Response) (*ParentalDisableResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ParentalDisableResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseParentalEnableResp parses an HTTP response from a ParentalEnableWithResponse call
 func ParseParentalEnableResp(rsp *http.Response) (*ParentalEnableResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ParentalEnableResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseParentalStatusResp parses an HTTP response from a ParentalStatusWithResponse call
 func ParseParentalStatusResp(rsp *http.Response) (*ParentalStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ParentalStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest struct {
-			Enable      *bool `json:"enable,omitempty"`
-			Sensitivity *int  `json:"sensitivity,omitempty"`
-		}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseGetProfileResp parses an HTTP response from a GetProfileWithResponse call
 func ParseGetProfileResp(rsp *http.Response) (*GetProfileResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetProfileResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ProfileInfo
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseUpdateProfileResp parses an HTTP response from a UpdateProfileWithResponse call
 func ParseUpdateProfileResp(rsp *http.Response) (*UpdateProfileResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &UpdateProfileResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSetProtectionResp parses an HTTP response from a SetProtectionWithResponse call
 func ParseSetProtectionResp(rsp *http.Response) (*SetProtectionResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SetProtectionResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseQueryLogResp parses an HTTP response from a QueryLogWithResponse call
 func ParseQueryLogResp(rsp *http.Response) (*QueryLogResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &QueryLogResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest QueryLog
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseGetQueryLogConfigResp parses an HTTP response from a GetQueryLogConfigWithResponse call
 func ParseGetQueryLogConfigResp(rsp *http.Response) (*GetQueryLogConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetQueryLogConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest GetQueryLogConfigResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParsePutQueryLogConfigResp parses an HTTP response from a PutQueryLogConfigWithResponse call
 func ParsePutQueryLogConfigResp(rsp *http.Response) (*PutQueryLogConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutQueryLogConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseQuerylogClearResp parses an HTTP response from a QuerylogClearWithResponse call
 func ParseQuerylogClearResp(rsp *http.Response) (*QuerylogClearResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &QuerylogClearResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseQueryLogConfigResp parses an HTTP response from a QueryLogConfigWithResponse call
 func ParseQueryLogConfigResp(rsp *http.Response) (*QueryLogConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &QueryLogConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseQueryLogInfoResp parses an HTTP response from a QueryLogInfoWithResponse call
 func ParseQueryLogInfoResp(rsp *http.Response) (*QueryLogInfoResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &QueryLogInfoResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest QueryLogConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseRewriteAddResp parses an HTTP response from a RewriteAddWithResponse call
 func ParseRewriteAddResp(rsp *http.Response) (*RewriteAddResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RewriteAddResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseRewriteDeleteResp parses an HTTP response from a RewriteDeleteWithResponse call
 func ParseRewriteDeleteResp(rsp *http.Response) (*RewriteDeleteResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RewriteDeleteResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseRewriteListResp parses an HTTP response from a RewriteListWithResponse call
 func ParseRewriteListResp(rsp *http.Response) (*RewriteListResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RewriteListResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest RewriteList
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseRewriteSettingsGetResp parses an HTTP response from a RewriteSettingsGetWithResponse call
 func ParseRewriteSettingsGetResp(rsp *http.Response) (*RewriteSettingsGetResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RewriteSettingsGetResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest RewriteSettings
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseRewriteSettingsUpdateResp parses an HTTP response from a RewriteSettingsUpdateWithResponse call
 func ParseRewriteSettingsUpdateResp(rsp *http.Response) (*RewriteSettingsUpdateResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RewriteSettingsUpdateResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseRewriteUpdateResp parses an HTTP response from a RewriteUpdateWithResponse call
 func ParseRewriteUpdateResp(rsp *http.Response) (*RewriteUpdateResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RewriteUpdateResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafebrowsingDisableResp parses an HTTP response from a SafebrowsingDisableWithResponse call
 func ParseSafebrowsingDisableResp(rsp *http.Response) (*SafebrowsingDisableResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafebrowsingDisableResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafebrowsingEnableResp parses an HTTP response from a SafebrowsingEnableWithResponse call
 func ParseSafebrowsingEnableResp(rsp *http.Response) (*SafebrowsingEnableResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafebrowsingEnableResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafebrowsingStatusResp parses an HTTP response from a SafebrowsingStatusWithResponse call
 func ParseSafebrowsingStatusResp(rsp *http.Response) (*SafebrowsingStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafebrowsingStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest struct {
-			Enabled *bool `json:"enabled,omitempty"`
-		}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafesearchDisableResp parses an HTTP response from a SafesearchDisableWithResponse call
 func ParseSafesearchDisableResp(rsp *http.Response) (*SafesearchDisableResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafesearchDisableResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafesearchEnableResp parses an HTTP response from a SafesearchEnableWithResponse call
 func ParseSafesearchEnableResp(rsp *http.Response) (*SafesearchEnableResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafesearchEnableResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafesearchSettingsResp parses an HTTP response from a SafesearchSettingsWithResponse call
 func ParseSafesearchSettingsResp(rsp *http.Response) (*SafesearchSettingsResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafesearchSettingsResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseSafesearchStatusResp parses an HTTP response from a SafesearchStatusWithResponse call
 func ParseSafesearchStatusResp(rsp *http.Response) (*SafesearchStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SafesearchStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SafeSearchConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseStatsResp parses an HTTP response from a StatsWithResponse call
 func ParseStatsResp(rsp *http.Response) (*StatsResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &StatsResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Stats
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseGetStatsConfigResp parses an HTTP response from a GetStatsConfigWithResponse call
 func ParseGetStatsConfigResp(rsp *http.Response) (*GetStatsConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetStatsConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest GetStatsConfigResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParsePutStatsConfigResp parses an HTTP response from a PutStatsConfigWithResponse call
 func ParsePutStatsConfigResp(rsp *http.Response) (*PutStatsConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutStatsConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseStatsConfigResp parses an HTTP response from a StatsConfigWithResponse call
 func ParseStatsConfigResp(rsp *http.Response) (*StatsConfigResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &StatsConfigResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseStatsInfoResp parses an HTTP response from a StatsInfoWithResponse call
 func ParseStatsInfoResp(rsp *http.Response) (*StatsInfoResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &StatsInfoResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest StatsConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseStatsResetResp parses an HTTP response from a StatsResetWithResponse call
 func ParseStatsResetResp(rsp *http.Response) (*StatsResetResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &StatsResetResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseStatusResp parses an HTTP response from a StatusWithResponse call
 func ParseStatusResp(rsp *http.Response) (*StatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &StatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ServerStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseTestUpstreamDNSResp parses an HTTP response from a TestUpstreamDNSWithResponse call
 func ParseTestUpstreamDNSResp(rsp *http.Response) (*TestUpstreamDNSResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &TestUpstreamDNSResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest UpstreamsConfigResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseTlsConfigureResp parses an HTTP response from a TlsConfigureWithResponse call
 func ParseTlsConfigureResp(rsp *http.Response) (*TlsConfigureResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &TlsConfigureResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest TlsConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseTlsStatusResp parses an HTTP response from a TlsStatusWithResponse call
 func ParseTlsStatusResp(rsp *http.Response) (*TlsStatusResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &TlsStatusResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest TlsConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseTlsValidateResp parses an HTTP response from a TlsValidateWithResponse call
 func ParseTlsValidateResp(rsp *http.Response) (*TlsValidateResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &TlsValidateResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest TlsConfig
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseBeginUpdateResp parses an HTTP response from a BeginUpdateWithResponse call
 func ParseBeginUpdateResp(rsp *http.Response) (*BeginUpdateResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &BeginUpdateResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ParseGetVersionJsonResp parses an HTTP response from a GetVersionJsonWithResponse call
 func ParseGetVersionJsonResp(rsp *http.Response) (*GetVersionJsonResp, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetVersionJsonResp{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest VersionInfo
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

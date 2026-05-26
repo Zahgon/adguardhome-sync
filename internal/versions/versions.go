@@ -1,23 +1,12 @@
 package versions
 
-import "golang.org/x/mod/semver"
-
 const (
 	// MinAgh minimal adguardhome version.
 	MinAgh = "v0.107.40"
 )
 
-func IsNewerThan(v1, v2 string) bool {
-	return semver.Compare(sanitize(v1), sanitize(v2)) == 1
-}
+func IsNewerThan(v1, v2 string) bool { _ = "STUB: not implemented"; return false }
 
-func IsSame(v1, v2 string) bool {
-	return semver.Compare(sanitize(v1), sanitize(v2)) == 0
-}
+func IsSame(v1, v2 string) bool { _ = "STUB: not implemented"; return false }
 
-func sanitize(v string) string {
-	if v == "" || v[0] == 'v' {
-		return v
-	}
-	return "v" + v
-}
+func sanitize(v string) string { _ = "STUB: not implemented"; return "" }

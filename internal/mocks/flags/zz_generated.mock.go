@@ -12,8 +12,6 @@
 package client
 
 import (
-	reflect "reflect"
-
 	gomock "go.uber.org/mock/gomock"
 )
 
@@ -30,72 +28,53 @@ type MockFlagsMockRecorder struct {
 }
 
 // NewMockFlags creates a new mock instance.
-func NewMockFlags(ctrl *gomock.Controller) *MockFlags {
-	mock := &MockFlags{ctrl: ctrl}
-	mock.recorder = &MockFlagsMockRecorder{mock}
-	return mock
-}
+func NewMockFlags(ctrl *gomock.Controller) *MockFlags { _ = "STUB: not implemented"; return nil }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockFlags) EXPECT() *MockFlagsMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// Changed mocks base method.
+	return nil
 }
 
-// Changed mocks base method.
-func (m *MockFlags) Changed(name string) bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Changed", name)
-	ret0, _ := ret[0].(bool)
-	return ret0
-}
+func (m *MockFlags) Changed(name string) bool { _ = "STUB: not implemented"; return false }
 
 // Changed indicates an expected call of Changed.
 func (mr *MockFlagsMockRecorder) Changed(name any) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Changed", reflect.TypeOf((*MockFlags)(nil).Changed), name)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetBool mocks base method.
 func (m *MockFlags) GetBool(name string) (bool, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetBool", name)
-	ret0, _ := ret[0].(bool)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return false, nil
 }
 
 // GetBool indicates an expected call of GetBool.
 func (mr *MockFlagsMockRecorder) GetBool(name any) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBool", reflect.TypeOf((*MockFlags)(nil).GetBool), name)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetInt mocks base method.
-func (m *MockFlags) GetInt(name string) (int, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetInt", name)
-	ret0, _ := ret[0].(int)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
+func (m *MockFlags) GetInt(name string) (int, error) { _ = "STUB: not implemented"; return 0, nil }
 
 // GetInt indicates an expected call of GetInt.
 func (mr *MockFlagsMockRecorder) GetInt(name any) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInt", reflect.TypeOf((*MockFlags)(nil).GetInt), name)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetString mocks base method.
 func (m *MockFlags) GetString(name string) (string, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetString", name)
-	ret0, _ := ret[0].(string)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // GetString indicates an expected call of GetString.
 func (mr *MockFlagsMockRecorder) GetString(name any) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetString", reflect.TypeOf((*MockFlags)(nil).GetString), name)
+	_ = "STUB: not implemented"
+	return nil
 }

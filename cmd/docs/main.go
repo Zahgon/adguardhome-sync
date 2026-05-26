@@ -2,14 +2,10 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"log/slog"
 	"os"
 	"reflect"
-	"strings"
-
-	"github.com/bakito/adguardhome-sync/internal/types"
 )
 
 const (
@@ -43,135 +39,23 @@ func main() {
 	}
 }
 
-func generateEnvDocumentation(fileContent string) string {
-	var buf strings.Builder
-	buf.WriteString("| Name | Type | Description |\n")
-	buf.WriteString("| :--- | ---- |:----------- |\n")
-	writeEnvDocumentation(&buf, reflect.TypeFor[types.Config](), "")
+func generateEnvDocumentation(fileContent string) string { _ = "STUB: not implemented"; return "" }
 
-	return updateDocumentationSection(fileContent, envStartMarker, envEndMarker, buf.String())
-}
-
-func generateYAMLDocumentation(fileContent string) string {
-	var buf strings.Builder
-	buf.WriteString("```yaml\n")
-	writeYAMLDocumentation(&buf, reflect.TypeFor[types.Config](), "", "")
-	buf.WriteString("```\n")
-
-	return updateDocumentationSection(fileContent, yamlStartMarker, yamlEndMarker, buf.String())
-}
+func generateYAMLDocumentation(fileContent string) string { _ = "STUB: not implemented"; return "" }
 
 func updateDocumentationSection(fileContent, startMarker, endMarker, newContent string) string {
-	startIdx := strings.Index(fileContent, startMarker)
-	endIdx := strings.Index(fileContent, endMarker)
-
-	if startIdx == -1 || endIdx == -1 {
-		slog.Error(fmt.Sprintf("Could not find markers %s and %s in README.md", startMarker, endMarker))
-		os.Exit(1)
-	}
-
-	return fileContent[:startIdx+len(startMarker)] + "\n" + newContent + fileContent[endIdx:]
+	_ = "STUB: not implemented"
+	return ""
 }
 
 func writeEnvDocumentation(w io.Writer, t reflect.Type, prefix string) {
-	if t.Kind() == reflect.Pointer {
-		t = t.Elem()
-	}
-	if t.Kind() != reflect.Struct {
-		return
-	}
-
-	for _, field := range reflect.VisibleFields(t) {
-		if field.PkgPath != "" {
-			continue
-		}
-
-		envTag := field.Tag.Get("env")
-		if envTag == "" {
-			switch field.Name {
-			case "Origin":
-				envTag = "ORIGIN"
-			case "Replica":
-				envTag = "REPLICA#"
-			}
-		}
-
-		combinedTag := buildCombinedTag(prefix, envTag)
-
-		ft := field.Type
-		if ft.Kind() == reflect.Pointer {
-			ft = ft.Elem()
-		}
-
-		if ft.Kind() == reflect.Struct && ft.Name() != "Time" {
-			writeEnvDocumentation(w, ft, strings.TrimSuffix(combinedTag, "_"))
-		} else if envTag != "" {
-			envVar := strings.Trim(combinedTag, "_") + " (" + ft.Kind().String() + ")"
-			docs := field.Tag.Get("documentation")
-			fmt.Fprintf(w, "| %s | %s | %s |\n", envVar, ft.Kind().String(), docs)
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 func writeYAMLDocumentation(w io.Writer, t reflect.Type, firstPrefix, otherPrefix string) {
-	if t.Kind() == reflect.Pointer {
-		t = t.Elem()
-	}
-	if t.Kind() != reflect.Struct {
-		return
-	}
-
-	var i int
-	for _, field := range reflect.VisibleFields(t) {
-		if field.PkgPath != "" {
-			continue
-		}
-
-		yamlTag := field.Tag.Get("yaml")
-		if yamlTag == "-" {
-			continue
-		}
-		yamlTag = strings.TrimSuffix(yamlTag, ",omitempty")
-
-		ft := field.Type
-		if ft.Kind() == reflect.Pointer {
-			ft = ft.Elem()
-		}
-
-		pf := otherPrefix
-		if i == 0 {
-			pf = firstPrefix
-		}
-
-		newFirstPrefix := pf + "  "
-		newOtherPrefix := otherPrefix + "  "
-
-		if yamlTag == "replicas" && ft.Kind() == reflect.Slice {
-			ft = ft.Elem()
-			newFirstPrefix += "- "
-			newOtherPrefix += "  "
-		}
-
-		if yamlTag != "" {
-			docs := field.Tag.Get("documentation")
-			fmt.Fprintf(w, "%s%s: # (%s) %s\n", pf, yamlTag, ft.Kind().String(), docs)
-			i++
-		}
-
-		if ft.Kind() == reflect.Struct && ft.Name() != "Time" {
-			writeYAMLDocumentation(w, ft, newFirstPrefix, newOtherPrefix)
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
-func buildCombinedTag(prefix, envTag string) string {
-	if prefix != "" && envTag != "" {
-		if strings.HasPrefix(envTag, prefix+"_") {
-			return envTag
-		}
-		return prefix + "_" + envTag
-	} else if prefix != "" {
-		return prefix
-	}
-	return envTag
-}
+func buildCombinedTag(prefix, envTag string) string { _ = "STUB: not implemented"; return "" }

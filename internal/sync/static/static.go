@@ -1,8 +1,6 @@
 package static
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 
 	_ "embed"
@@ -42,40 +40,20 @@ var (
 	chart []byte
 )
 
-func handleFavicon(c *gin.Context) {
-	c.Data(http.StatusOK, "image/x-icon", favicon)
-}
+func handleFavicon(c *gin.Context) { _ = "STUB: not implemented"; return }
 
-func handleLogo(c *gin.Context) {
-	c.Data(http.StatusOK, "image/svg+xml", logo)
-}
+func handleLogo(c *gin.Context) { _ = "STUB: not implemented"; return }
 
-func Index() string {
-	return index
-}
+func Index() string { _ = "STUB: not implemented"; return "" }
 
-func HandleResources(group gin.IRouter, dark bool) {
-	group.GET("/favicon.ico", handleFavicon)
-	group.GET("/logo.svg", handleLogo)
-	group.GET("/lib/jquery.js", handleJS(jquery))
-	group.GET("/lib/popper.js", handleJS(popper))
-	group.GET("/lib/chart.js", handleJS(chart))
-	group.GET("/lib/bootstrap.js", handleJS(bootstrapJS))
-	if dark {
-		group.GET("/lib/bootstrap.css", handleCSS(bootstrapDarkCSS))
-	} else {
-		group.GET("/lib/bootstrap.css", handleCSS(bootstrapCSS))
-	}
-}
+func HandleResources(group gin.IRouter, dark bool) { _ = "STUB: not implemented"; return }
 
 func handleJS(bytes []byte) gin.HandlerFunc {
-	return func(c *gin.Context) {
-		c.Data(http.StatusOK, "application/javascript", bytes)
-	}
+	_ = "STUB: not implemented"
+	return *new(gin.HandlerFunc)
 }
 
 func handleCSS(bytes []byte) gin.HandlerFunc {
-	return func(c *gin.Context) {
-		c.Data(http.StatusOK, "text/css", bytes)
-	}
+	_ = "STUB: not implemented"
+	return *new(gin.HandlerFunc)
 }

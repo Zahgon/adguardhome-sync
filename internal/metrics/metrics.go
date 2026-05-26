@@ -153,111 +153,23 @@ var (
 )
 
 // Init initializes all Prometheus metrics made available by AdGuard  exporter.
-func Init() {
-	initMetric("avg_processing_time", avgProcessingTime)
-	initMetric("num_dns_queries", dnsQueries)
-	initMetric("num_blocked_filtering", blockedFiltering)
-	initMetric("num_replaced_parental", parentalFiltering)
-	initMetric("num_replaced_safebrowsing", safeBrowsingFiltering)
-	initMetric("num_replaced_safesearch", safeSearchFiltering)
-	initMetric("top_queried_domains", topQueries)
-	initMetric("top_blocked_domains", topBlocked)
-	initMetric("top_clients", topClients)
-	initMetric("query_types", queryTypes)
-	initMetric("running", running)
-	initMetric("protection_enabled", protectionEnabled)
-	initMetric("sync_duration_seconds", aghsSyncDuration)
-	initMetric("sync_successful", aghsSyncSuccessful)
-}
+func Init() { _ = "STUB: not implemented"; return }
 
-func initMetric(name string, metric *prometheus.GaugeVec) {
-	prometheus.MustRegister(metric)
-	l.With("name", name).Info("New Prometheus metric registered")
-}
+func initMetric(name string, metric *prometheus.GaugeVec) { _ = "STUB: not implemented"; return }
 
-func UpdateInstances(iml InstanceMetricsList) {
-	for _, im := range iml.Metrics {
-		updateMetrics(im)
-		stats[im.HostName] = im.Stats
-	}
+func UpdateInstances(iml InstanceMetricsList) { _ = "STUB: not implemented"; return }
 
-	l.Debug("updated")
-}
-
-func UpdateResult(host string, ok bool, duration float64) {
-	if ok {
-		aghsSyncSuccessful.WithLabelValues(host).Set(1)
-	} else {
-		aghsSyncSuccessful.WithLabelValues(host).Set(0)
-	}
-	aghsSyncDuration.WithLabelValues(host).Set(duration)
-}
+func UpdateResult(host string, ok bool, duration float64) { _ = "STUB: not implemented"; return }
 
 func updateMetrics(im InstanceMetrics) {
+	_ = "STUB: not implemented"
 	// Status
-	isRunning := 0
-	if im.Status.Running {
-		isRunning = 1
-	}
-	running.WithLabelValues(im.HostName).Set(float64(isRunning))
-
-	isProtected := 0
-	if im.Status.ProtectionEnabled {
-		isProtected = 1
-	}
-	protectionEnabled.WithLabelValues(im.HostName).Set(float64(isProtected))
-
-	// Stats
-	avgProcessingTime.WithLabelValues(im.HostName).Set(safeMetric(im.Stats.AvgProcessingTime))
-	dnsQueries.WithLabelValues(im.HostName).Set(safeMetric(im.Stats.NumDnsQueries))
-	blockedFiltering.WithLabelValues(im.HostName).Set(safeMetric(im.Stats.NumBlockedFiltering))
-	parentalFiltering.WithLabelValues(im.HostName).Set(safeMetric(im.Stats.NumReplacedParental))
-	safeBrowsingFiltering.WithLabelValues(im.HostName).Set(safeMetric(im.Stats.NumReplacedSafebrowsing))
-	safeSearchFiltering.WithLabelValues(im.HostName).Set(safeMetric(im.Stats.NumReplacedSafesearch))
-
-	if im.Stats.TopQueriedDomains != nil {
-		for _, tq := range *im.Stats.TopQueriedDomains {
-			for domain, value := range tq.AdditionalProperties {
-				topQueries.WithLabelValues(im.HostName, domain).Set(float64(value))
-			}
-		}
-	}
-	if im.Stats.TopBlockedDomains != nil {
-		for _, tb := range *im.Stats.TopBlockedDomains {
-			for domain, value := range tb.AdditionalProperties {
-				topBlocked.WithLabelValues(im.HostName, domain).Set(float64(value))
-			}
-		}
-	}
-	if im.Stats.TopClients != nil {
-		for _, tc := range *im.Stats.TopClients {
-			for source, value := range tc.AdditionalProperties {
-				topClients.WithLabelValues(im.HostName, source).Set(float64(value))
-			}
-		}
-	}
-
-	// LogQuery
-	m := make(map[string]int)
-	if im.QueryLog != nil && im.QueryLog.Data != nil {
-		logdata := *im.QueryLog.Data
-		for _, ld := range logdata {
-			if ld.Answer != nil {
-				dnsanswer := *ld.Answer
-				if len(dnsanswer) > 0 {
-					for _, dnsa := range dnsanswer {
-						dnsType := *dnsa.Type
-						m[dnsType]++
-					}
-				}
-			}
-		}
-	}
-
-	for key, value := range m {
-		queryTypes.WithLabelValues(im.HostName, key).Set(float64(value))
-	}
+	return
 }
+
+// Stats
+
+// LogQuery
 
 type InstanceMetricsList struct {
 	Metrics []InstanceMetrics `faker:"slice_len=5"`
@@ -273,25 +185,12 @@ type InstanceMetrics struct {
 type OverallStats map[string]*model.Stats
 
 func (os OverallStats) consolidate() OverallStats {
-	consolidated := OverallStats{StatsTotal: model.NewStats()}
-	for host, stats := range os {
-		consolidated[host] = stats
-		consolidated[StatsTotal].Add(stats)
-	}
-	return consolidated
+	_ = "STUB: not implemented"
+	return *new(OverallStats)
 }
 
-func safeMetric[T int | float64 | float32](v *T) float64 {
-	if v == nil {
-		return 0
-	}
-	return float64(*v)
-}
+func safeMetric[T int | float64 | float32](v *T) float64 { _ = "STUB: not implemented"; return 0 }
 
-func getStats() OverallStats {
-	return stats.consolidate()
-}
+func getStats() OverallStats { _ = "STUB: not implemented"; return *new(OverallStats) }
 
-func (os OverallStats) Total() *model.Stats {
-	return os[StatsTotal]
-}
+func (os OverallStats) Total() *model.Stats { _ = "STUB: not implemented"; return nil }

@@ -1,9 +1,6 @@
 package metrics
 
 import (
-	"slices"
-	"strings"
-
 	"github.com/bakito/adguardhome-sync/internal/client/model"
 )
 
@@ -48,30 +45,11 @@ var (
 )
 
 func StatsGraph() (t *model.Stats, dns, blocked, malware, adult []Line) {
-	s := getStats()
-	t = s.Total()
-	dns = graphLines(t, s, blue, blueAlternatives, func(s *model.Stats) []int {
-		return safeStats(s.DnsQueries)
-	})
-	blocked = graphLines(t, s, red, redAlternatives, func(s *model.Stats) []int {
-		return safeStats(s.BlockedFiltering)
-	})
-	malware = graphLines(t, s, green, greenAlternatives, func(s *model.Stats) []int {
-		return safeStats(s.ReplacedSafebrowsing)
-	})
-	adult = graphLines(t, s, yellow, yellowAlternatives, func(s *model.Stats) []int {
-		return safeStats(s.ReplacedParental)
-	})
-
-	return t, dns, blocked, malware, adult
+	_ = "STUB: not implemented"
+	return nil, nil, nil, nil, nil
 }
 
-func safeStats(stats *[]int) []int {
-	if stats == nil {
-		return make([]int, 0)
-	}
-	return *stats
-}
+func safeStats(stats *[]int) []int { _ = "STUB: not implemented"; return nil }
 
 func graphLines(
 	t *model.Stats,
@@ -80,39 +58,8 @@ func graphLines(
 	altColors [][]int,
 	dataCB func(s *model.Stats) []int,
 ) []Line {
-	g := &graph{
-		total: Line{
-			Fill:  true,
-			Title: labelTotal,
-			Data:  dataCB(t),
-			R:     baseColor[0],
-			G:     baseColor[1],
-			B:     baseColor[2],
-		},
-	}
-
-	var i int
-	for name, data := range s {
-		if name != StatsTotal {
-			g.replicas = append(g.replicas, Line{
-				Fill:  false,
-				Title: name,
-				Data:  dataCB(data),
-				R:     altColors[i%len(altColors)][0],
-				G:     altColors[i%len(altColors)][1],
-				B:     altColors[i%len(altColors)][2],
-			})
-			i++
-		}
-	}
-
-	lines := []Line{g.total}
-
-	slices.SortFunc(g.replicas, func(a, b Line) int {
-		return strings.Compare(a.Title, b.Title)
-	})
-	lines = append(lines, g.replicas...)
-	return lines
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type graph struct {

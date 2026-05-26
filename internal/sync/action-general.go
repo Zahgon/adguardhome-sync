@@ -1,8 +1,6 @@
 package sync
 
 import (
-	"fmt"
-
 	"go.uber.org/zap"
 
 	"github.com/bakito/adguardhome-sync/internal/client"
@@ -291,56 +289,10 @@ func syncFilterType(
 	replica client.Client,
 	continueOnError bool,
 ) error {
-	fa, fu, fd := model.MergeFilters(rFilters, of)
-
-	for _, f := range fd {
-		if err := replica.DeleteFilter(whitelist, f); err != nil {
-			rl.With("filter", f.Name, "url", f.Url, "whitelist", whitelist, "error", err).Error("error deleting filter")
-			if !continueOnError {
-				return err
-			}
-		}
-	}
-
-	for _, f := range fa {
-		if err := replica.AddFilter(whitelist, f); err != nil {
-			rl.With("filter", f.Name, "url", f.Url, "whitelist", whitelist, "error", err).Error("error adding filter")
-			if !continueOnError {
-				return err
-			}
-		}
-	}
-
-	for _, f := range fu {
-		if err := replica.UpdateFilter(whitelist, f); err != nil {
-			rl.With("filter", f.Name, "url", f.Url, "whitelist", whitelist, "error", err).Error("error updating filter")
-			if !continueOnError {
-				return err
-			}
-		}
-	}
-
-	if len(fa) > 0 || len(fu) > 0 {
-		if err := replica.RefreshFilters(whitelist); err != nil {
-			return err
-		}
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func ptrEquals[I comparable](a, b *I) bool {
-	if a == nil && b == nil {
-		return true
-	}
-	if a == nil || b == nil {
-		return false
-	}
-	return *a == *b
-}
+func ptrEquals[I comparable](a, b *I) bool { _ = "STUB: not implemented"; return false }
 
-func ptrToString[I any](i *I) string {
-	if i == nil {
-		return ""
-	}
-	return fmt.Sprintf("%v", i)
-}
+func ptrToString[I any](i *I) string { _ = "STUB: not implemented"; return "" }

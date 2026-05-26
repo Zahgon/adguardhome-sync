@@ -86,57 +86,6 @@ func main() {
 	}
 }
 
-func correctEntries(map[string]any) {
-}
+func correctEntries(map[string]any) { _ = "STUB: not implemented"; return }
 
-func addFakeTags(schema map[string]any) {
-	fake := map[string]any{"faker": `slice_len=24`}
-	if err := unstructured.SetNestedMap(
-		schema,
-		fake,
-		"components",
-		"schemas",
-		"Stats",
-		"properties",
-		"blocked_filtering",
-		"x-oapi-codegen-extra-tags",
-	); err != nil {
-		log.Fatalln(err)
-	}
-	if err := unstructured.SetNestedMap(
-		schema,
-		fake,
-		"components",
-		"schemas",
-		"Stats",
-		"properties",
-		"dns_queries",
-		"x-oapi-codegen-extra-tags",
-	); err != nil {
-		log.Fatalln(err)
-	}
-	if err := unstructured.SetNestedMap(
-		schema,
-		fake,
-		"components",
-		"schemas",
-		"Stats",
-		"properties",
-		"replaced_parental",
-		"x-oapi-codegen-extra-tags",
-	); err != nil {
-		log.Fatalln(err)
-	}
-	if err := unstructured.SetNestedMap(
-		schema,
-		fake,
-		"components",
-		"schemas",
-		"Stats",
-		"properties",
-		"replaced_safebrowsing",
-		"x-oapi-codegen-extra-tags",
-	); err != nil {
-		log.Fatalln(err)
-	}
-}
+func addFakeTags(schema map[string]any) { _ = "STUB: not implemented"; return }

@@ -11,9 +11,8 @@ import (
 var _ model.HttpRequestDoer = &adapter{}
 
 func RestyAdapter(r *resty.Client) model.HttpRequestDoer {
-	return &adapter{
-		client: r,
-	}
+	_ = "STUB: not implemented"
+	return *new(model.HttpRequestDoer)
 }
 
 type adapter struct {
@@ -21,8 +20,6 @@ type adapter struct {
 }
 
 func (a adapter) Do(req *http.Request) (*http.Response, error) {
-	r, err := a.client.R().
-		SetHeaderMultiValues(req.Header).
-		Execute(req.Method, req.URL.String())
-	return r.RawResponse, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
